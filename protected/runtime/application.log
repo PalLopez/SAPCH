@@ -1,0 +1,796 @@
+2016/02/02 19:19:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/gii
+---
+2016/02/02 22:02:09 [error] [exception.CException] exception 'CException' with message 'Property "Usuarios.contraseña" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('contrase\xC3\xB1a')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('contrase\xC3\xB1a')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Usuarios), 'contrase\xC3\xB1a')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1533): CHtml::activeInputField('text', Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#5 C:\xampp\htdocs\yii\sapch\protected\views\usuarios\_search.php(41): CActiveForm->textField(Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\sapch\protected\views\usuarios\admin.php(40): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\yii\sapch\protected\controllers\UsuariosController.php(143): CController->render('admin', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UsuariosController->actionAdmin()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuarios/admin')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/yii/sapch/usuarios/admin
+HTTP_REFERER=http://localhost:8080/yii/sapch/site/login
+---
+2016/02/02 22:03:13 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 22:03:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/02 22:05:37 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 22:05:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/02 22:06:14 [error] [exception.CException] exception 'CException' with message 'Property "Usuarios.contraseña" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('contrase\xC3\xB1a')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('contrase\xC3\xB1a')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Usuarios), 'contrase\xC3\xB1a')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1533): CHtml::activeInputField('text', Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#5 C:\xampp\htdocs\yii\sapch\protected\views\usuarios\_form.php(48): CActiveForm->textField(Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\sapch\protected\views\usuarios\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\yii\sapch\protected\controllers\UsuariosController.php(79): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UsuariosController->actionCreate()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuarios/create')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/yii/sapch/usuarios/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/usuarios
+---
+2016/02/02 22:06:17 [error] [exception.CException] exception 'CException' with message 'Property "Usuarios.contraseña" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('contrase\xC3\xB1a')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('contrase\xC3\xB1a')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Usuarios), 'contrase\xC3\xB1a')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1533): CHtml::activeInputField('text', Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#5 C:\xampp\htdocs\yii\sapch\protected\views\usuarios\_form.php(48): CActiveForm->textField(Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\sapch\protected\views\usuarios\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\yii\sapch\protected\controllers\UsuariosController.php(79): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UsuariosController->actionCreate()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuarios/create')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/yii/sapch/usuarios/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/usuarios
+---
+2016/02/02 22:06:19 [error] [exception.CException] exception 'CException' with message 'Property "Usuarios.contraseña" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('contrase\xC3\xB1a')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('contrase\xC3\xB1a')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Usuarios), 'contrase\xC3\xB1a')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1533): CHtml::activeInputField('text', Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#5 C:\xampp\htdocs\yii\sapch\protected\views\usuarios\_search.php(41): CActiveForm->textField(Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\sapch\protected\views\usuarios\admin.php(40): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\yii\sapch\protected\controllers\UsuariosController.php(143): CController->render('admin', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UsuariosController->actionAdmin()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuarios/admin')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/yii/sapch/usuarios/admin
+HTTP_REFERER=http://localhost:8080/yii/sapch/usuarios
+---
+2016/02/02 22:06:28 [error] [exception.CException] exception 'CException' with message 'Property "Usuarios.contraseña" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('contrase\xC3\xB1a')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('contrase\xC3\xB1a')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Usuarios), 'contrase\xC3\xB1a')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1533): CHtml::activeInputField('text', Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#5 C:\xampp\htdocs\yii\sapch\protected\views\usuarios\_search.php(41): CActiveForm->textField(Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\sapch\protected\views\usuarios\admin.php(40): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\yii\sapch\protected\controllers\UsuariosController.php(143): CController->render('admin', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UsuariosController->actionAdmin()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuarios/admin')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/yii/sapch/usuarios/admin
+HTTP_REFERER=http://localhost:8080/yii/sapch/usuarios
+---
+2016/02/02 22:08:02 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`visitas`, CONSTRAINT `visitas_ibfk_1` FOREIGN KEY (`id_pe`) REFERENCES `personal_externo` (`id`)). The SQL statement executed was: INSERT INTO `visitas` (`hr_entrada`, `hr_salida`, `motivo`, `fecha`, `id_pe`, `id_nino`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\VisitasController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 22:08:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`visitas`, CONSTRAINT `visitas_ibfk_1` FOREIGN KEY (`id_pe`) REFERENCES `personal_externo` (`id`)). The SQL statement executed was: INSERT INTO `visitas` (`hr_entrada`, `hr_salida`, `motivo`, `fecha`, `id_pe`, `id_nino`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\VisitasController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): VisitasController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('visitas/create')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/visitas/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/visitas/create
+---
+2016/02/02 22:23:05 [error] [exception.CException] exception 'CException' with message 'Property "Usuarios.contraseña" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('contrase\xC3\xB1a')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('contrase\xC3\xB1a')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Usuarios), 'contrase\xC3\xB1a')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1533): CHtml::activeInputField('text', Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#5 C:\xampp\htdocs\yii\sapch\protected\views\usuarios\_form.php(48): CActiveForm->textField(Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\sapch\protected\views\usuarios\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\yii\sapch\protected\controllers\UsuariosController.php(79): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UsuariosController->actionCreate()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuarios/create')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/yii/sapch/usuarios/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/usuarios
+---
+2016/02/02 22:23:09 [error] [exception.CException] exception 'CException' with message 'Property "Usuarios.contraseña" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('contrase\xC3\xB1a')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('contrase\xC3\xB1a')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Usuarios), 'contrase\xC3\xB1a')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1533): CHtml::activeInputField('text', Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#5 C:\xampp\htdocs\yii\sapch\protected\views\usuarios\_search.php(41): CActiveForm->textField(Object(Usuarios), 'contrase\xC3\xB1a', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\sapch\protected\views\usuarios\admin.php(40): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\yii\sapch\protected\controllers\UsuariosController.php(143): CController->render('admin', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UsuariosController->actionAdmin()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuarios/admin')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/yii/sapch/usuarios/admin
+HTTP_REFERER=http://localhost:8080/yii/sapch/usuarios
+---
+2016/02/02 22:30:40 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 22:30:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/02 22:46:52 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 22:46:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/02 22:47:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 22:47:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/02 22:48:39 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 22:48:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/02 22:52:36 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 22:52:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/02 22:52:46 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 22:52:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/02 22:54:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 22:54:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/02 23:00:20 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`visitas`, CONSTRAINT `visitas_ibfk_1` FOREIGN KEY (`id_pe`) REFERENCES `personal_externo` (`id`)). The SQL statement executed was: INSERT INTO `visitas` (`hr_entrada`, `hr_salida`, `motivo`, `fecha`, `id_pe`, `id_nino`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\VisitasController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 23:00:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`visitas`, CONSTRAINT `visitas_ibfk_1` FOREIGN KEY (`id_pe`) REFERENCES `personal_externo` (`id`)). The SQL statement executed was: INSERT INTO `visitas` (`hr_entrada`, `hr_salida`, `motivo`, `fecha`, `id_pe`, `id_nino`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\VisitasController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): VisitasController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('visitas/create')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/visitas/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/visitas/create
+---
+2016/02/02 23:05:10 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 23:05:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/02 23:05:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 23:05:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/02 23:16:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 23:16:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/02 23:17:32 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/02 23:17:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/03 15:51:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`sapch`.`ninos_salidas`, CONSTRAINT `ninos_salidas_ibfk_1` FOREIGN KEY (`id_nino`) REFERENCES `ninos` (`id`)). The SQL statement executed was: DELETE FROM `ninos` WHERE `ninos`.`id`='1'.
+in C:\xampp\htdocs\yii\sapch\protected\controllers\NinosController.php (113)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/03 15:51:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`sapch`.`ninos_salidas`, CONSTRAINT `ninos_salidas_ibfk_1` FOREIGN KEY (`id_nino`) REFERENCES `ninos` (`id`)). The SQL statement executed was: DELETE FROM `ninos` WHERE `ninos`.`id`='1'' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1807): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1227): CActiveRecord->deleteByPk('1')
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\NinosController.php(113): CActiveRecord->delete()
+#3 [internal function]: NinosController->actionDelete('1')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(NinosController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(NinosController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ninos/delete')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/sapch/ninos/delete/1?ajax=ninos-grid
+HTTP_REFERER=http://localhost:8080/yii/sapch/ninos/admin
+---
+2016/02/03 15:51:55 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`sapch`.`ninos_salidas`, CONSTRAINT `ninos_salidas_ibfk_1` FOREIGN KEY (`id_nino`) REFERENCES `ninos` (`id`)). The SQL statement executed was: DELETE FROM `ninos` WHERE `ninos`.`id`='1'.
+in C:\xampp\htdocs\yii\sapch\protected\controllers\NinosController.php (113)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/03 15:51:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`sapch`.`ninos_salidas`, CONSTRAINT `ninos_salidas_ibfk_1` FOREIGN KEY (`id_nino`) REFERENCES `ninos` (`id`)). The SQL statement executed was: DELETE FROM `ninos` WHERE `ninos`.`id`='1'' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1807): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1227): CActiveRecord->deleteByPk('1')
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\NinosController.php(113): CActiveRecord->delete()
+#3 [internal function]: NinosController->actionDelete('1')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(NinosController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(NinosController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ninos/delete')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/sapch/ninos/delete/1?ajax=ninos-grid
+HTTP_REFERER=http://localhost:8080/yii/sapch/ninos/admin
+---
+2016/02/03 15:53:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/03 15:53:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/09 16:06:08 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/09 16:06:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/09 16:07:08 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php (73)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/09 16:07:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sapch`.`personal_externo`, CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `personal_externo` (`nombre`, `empresa`, `tipo`, `genero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\PersonalExternoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonalExternoController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personalExterno...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/sapch/personalExterno/create
+HTTP_REFERER=http://localhost:8080/yii/sapch/personalExterno/create
+---
+2016/02/09 16:08:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "usuario/create".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/usuario/create
+---
+2016/02/09 16:21:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "niños/create".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ni\xC3\xB1os/create')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/ni%C3%B1os/create
+---
+2016/02/09 16:21:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "niños".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ni\xC3\xB1os')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/ni%C3%B1os
+---
+2016/02/09 16:24:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "entradas y salidas".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('entradas y sali...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/entradas%20y%20salidas
+---
+2016/02/09 16:24:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "entradas_salidas".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('entradas_salida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/entradas_salidas
+---
