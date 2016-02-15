@@ -3,20 +3,19 @@
 /* @var $model Ninos */
 
 $this->breadcrumbs=array(
-	'Ninoses'=>array('index'),
-	$model->id,
+	'Control de Niños'=>array('index'),
+	'Gestionar Niños'=>array('admin'),
+	'Visualización',
 );
 
 $this->menu=array(
-	array('label'=>'List Ninos', 'url'=>array('index')),
-	array('label'=>'Create Ninos', 'url'=>array('create')),
-	array('label'=>'Update Ninos', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Ninos', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Ninos', 'url'=>array('admin')),
+	array('label'=>'Actualizar Niño', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Eliminar Niño', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Regresar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Ninos #<?php echo $model->id; ?></h1>
+<h1>Visualización de Niño (<?php echo $model->nombre; ?>)</h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

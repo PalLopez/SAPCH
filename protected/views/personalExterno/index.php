@@ -7,12 +7,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create PersonalExterno', 'url'=>array('create')),
-	array('label'=>'Manage PersonalExterno', 'url'=>array('admin')),
+	array('label'=>'Gestionar Personal Externo', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Personal Externos</h1>
+<h1>Personal Externo</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
