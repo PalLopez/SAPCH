@@ -3,20 +3,18 @@
 /* @var $model Areas */
 
 $this->breadcrumbs=array(
-	'Areases'=>array('index'),
-	$model->id,
+	'Áreas'=>array('index'),
+	'Visualización',
 );
 
 $this->menu=array(
-	array('label'=>'List Areas', 'url'=>array('index')),
-	array('label'=>'Create Areas', 'url'=>array('create')),
-	array('label'=>'Update Areas', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Areas', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Areas', 'url'=>array('admin')),
+	array('label'=>'Actualizar Área', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Eliminar Área', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Regresar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Areas #<?php echo $model->id; ?></h1>
+<h1>Visualización de Áreas (<?php echo $model->nombre; ?>)</h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

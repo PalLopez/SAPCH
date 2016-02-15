@@ -3,19 +3,16 @@
 /* @var $model Areas */
 
 $this->breadcrumbs=array(
-	'Areases'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'Áreas'=>array('index'),
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List Areas', 'url'=>array('index')),
-	array('label'=>'Create Areas', 'url'=>array('create')),
-	array('label'=>'View Areas', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Areas', 'url'=>array('admin')),
+	array('label'=>'Visualizar Área', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Regresar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Areas <?php echo $model->id; ?></h1>
+<h1>Actualizar Área (<?php echo $model->nombre; ?>)</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

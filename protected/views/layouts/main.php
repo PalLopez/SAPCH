@@ -26,10 +26,12 @@
 				<?php $this->widget('zii.widgets.CMenu',array(
 					'items'=>array(
 						array('label'=>'Home', 'url'=>array('/site/index')),
-						array('label'=>'Visitas', 'url'=>array('/visitas')),
+						array('label'=>'Visitas', 'url'=>array('/visitas/admin')),
 						array('label'=>'Control de Niños', 'url'=>array('/ninos')),
 						array('label'=>'Personal Externo', 'url'=>array('/personalExterno/admin')),
 						array('label'=>'Personal Interno (Usuarios)', 'url'=>array('/usuarios/admin')),
+						array('label'=>'Entradas/Salidas', 'url'=>array('/entradas_salidas')),
+						array('label'=>'Áreas', 'url'=>array('/areas/admin')),
 						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 					),
@@ -47,7 +49,7 @@
 			<div class="clear"></div>
 
 			<div id="footer">
-				Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+				Copyright &copy; <?php echo date('Y'); ?> Fundación Palace.<br/>
 				All Rights Reserved.<br/>
 				<?php echo Yii::powered(); ?>
 			</div><!-- footer -->
