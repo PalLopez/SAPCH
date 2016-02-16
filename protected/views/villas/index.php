@@ -3,16 +3,15 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Villases',
+	'Villas',
 );
 
 $this->menu=array(
-	array('label'=>'Create Villas', 'url'=>array('create')),
-	array('label'=>'Manage Villas', 'url'=>array('admin')),
+	array('label'=>'Administrar Villas', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Villases</h1>
+<h1>Villas</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

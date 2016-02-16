@@ -3,16 +3,15 @@
 /* @var $model PersonalExterno */
 
 $this->breadcrumbs=array(
-	'Personal Externos'=>array('index'),
-	'Create',
+	'Personal Externo'=>array('index'),
+	'Nuevo',
 );
 
 $this->menu=array(
-	array('label'=>'List PersonalExterno', 'url'=>array('index')),
-	array('label'=>'Manage PersonalExterno', 'url'=>array('admin')),
+	array('label'=>'Regresar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create PersonalExterno</h1>
+<h1>Nuevo Personal Externo</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

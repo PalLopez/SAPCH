@@ -3,16 +3,15 @@
 /* @var $model Visitas */
 
 $this->breadcrumbs=array(
-	'Visitases'=>array('index'),
-	'Create',
+	'Visitas'=>array('index'),
+	'Nuevo',
 );
 
 $this->menu=array(
-	array('label'=>'List Visitas', 'url'=>array('index')),
-	array('label'=>'Manage Visitas', 'url'=>array('admin')),
+	array('label'=>'Regresar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Visitas</h1>
+<h1>Nueva Visita</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

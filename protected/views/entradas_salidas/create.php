@@ -3,16 +3,15 @@
 /* @var $model EntradasSalidas */
 
 $this->breadcrumbs=array(
-	'Entradas Salidases'=>array('index'),
-	'Create',
+	'Entradas/Salidas'=>array('index'),
+	'Nuevo',
 );
 
 $this->menu=array(
-	array('label'=>'List EntradasSalidas', 'url'=>array('index')),
-	array('label'=>'Manage EntradasSalidas', 'url'=>array('admin')),
+	array('label'=>'Regresar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create EntradasSalidas</h1>
+<h1>Nuevo Entradas/Salidas</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -3,13 +3,14 @@
 /* @var $model NinosSalidas */
 
 $this->breadcrumbs=array(
-	'Ninos Salidases'=>array('index'),
-	'Manage',
+	'Control de Niños'=>array('/ninos'),
+	'Salidas'=>array('index'),
+	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'List NinosSalidas', 'url'=>array('index')),
-	array('label'=>'Create NinosSalidas', 'url'=>array('create')),
+	array('label'=>'Nueva Salida', 'url'=>array('create')),
+	array('label'=>'Lista de Salidas', 'url'=>array('index')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,14 +27,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Ninos Salidases</h1>
+<h1>Administrar Salidas de Niños</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Busqueda Avanzada','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,

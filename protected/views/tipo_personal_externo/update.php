@@ -3,19 +3,15 @@
 /* @var $model TipoPersonalExterno */
 
 $this->breadcrumbs=array(
-	'Tipo Personal Externos'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'Tipos de Personal Externo'=>array('index'),
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List TipoPersonalExterno', 'url'=>array('index')),
-	array('label'=>'Create TipoPersonalExterno', 'url'=>array('create')),
-	array('label'=>'View TipoPersonalExterno', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage TipoPersonalExterno', 'url'=>array('admin')),
+	array('label'=>'Regresar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update TipoPersonalExterno <?php echo $model->id; ?></h1>
+<h1>Actualizar Tipo de Personal Externo (<?php echo $model->nombre; ?>)</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

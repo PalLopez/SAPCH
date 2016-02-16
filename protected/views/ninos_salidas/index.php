@@ -3,16 +3,17 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Ninos Salidases',
+	'Control de Niños'=>array('/ninos'),
+	'Salidas',
 );
 
 $this->menu=array(
-	array('label'=>'Create NinosSalidas', 'url'=>array('create')),
-	array('label'=>'Manage NinosSalidas', 'url'=>array('admin')),
+	array('label'=>'Administrar Salidas', 'url'=>array('admin')),
+	array('label'=>'Regresar', 'url'=>array('/ninos')),
 );
 ?>
 
-<h1>Ninos Salidases</h1>
+<h1>Salidas de Niños</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

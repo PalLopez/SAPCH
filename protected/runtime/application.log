@@ -1266,3 +1266,23 @@ Stack trace:
 REQUEST_URI=/yii/sapch/personalExterno/admin
 HTTP_REFERER=http://localhost/yii/sapch/ninos
 ---
+2016/02/16 09:21:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "niños_salidas".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ni\xC3\xB1os_salidas')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/ni%C3%B1os_salidas
+HTTP_REFERER=http://localhost/yii/sapch/ninos
+---
+2016/02/16 09:27:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/fun...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/fundacion_logo.jpg
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---

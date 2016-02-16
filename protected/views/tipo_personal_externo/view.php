@@ -3,20 +3,18 @@
 /* @var $model TipoPersonalExterno */
 
 $this->breadcrumbs=array(
-	'Tipo Personal Externos'=>array('index'),
-	$model->id,
+	'Tipos de Personal Externo'=>array('index'),
+	'Visualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List TipoPersonalExterno', 'url'=>array('index')),
-	array('label'=>'Create TipoPersonalExterno', 'url'=>array('create')),
-	array('label'=>'Update TipoPersonalExterno', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete TipoPersonalExterno', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage TipoPersonalExterno', 'url'=>array('admin')),
+	array('label'=>'Actualizar Tipo', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Eliminar Tipo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Regresar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View TipoPersonalExterno #<?php echo $model->id; ?></h1>
+<h1>Visualizar Tipo de Personal Externo (<?php echo $model->nombre; ?>)</h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

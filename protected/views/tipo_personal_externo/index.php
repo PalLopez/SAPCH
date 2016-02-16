@@ -3,16 +3,15 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Tipo Personal Externos',
+	'Tipos de Personal Externo',
 );
 
 $this->menu=array(
-	array('label'=>'Create TipoPersonalExterno', 'url'=>array('create')),
-	array('label'=>'Manage TipoPersonalExterno', 'url'=>array('admin')),
+	array('label'=>'Administrar Tipo', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Tipo Personal Externos</h1>
+<h1>Tipos de Personal Externo</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
