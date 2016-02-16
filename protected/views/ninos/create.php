@@ -3,7 +3,8 @@
 /* @var $model Ninos */
 
 $this->breadcrumbs=array(
-	'Control de Niños'=>array('index'),
+	'Control de Niños'=>array('/control_ninos'),
+	'Niños'=>array('index'),
 	'Nuevo',
 );
 

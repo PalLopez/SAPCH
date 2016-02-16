@@ -3,6 +3,7 @@
 /* @var $model Areas */
 
 $this->breadcrumbs=array(
+	'Configuración'=>array('/configuracion'),
 	'Areas'=>array('index'),
 	'Actualizar',
 );

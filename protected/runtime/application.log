@@ -1286,3 +1286,240 @@ Stack trace:
 REQUEST_URI=/yii/sapch/site/images/fundacion_logo.jpg
 HTTP_REFERER=http://localhost/yii/sapch/site/index
 ---
+2016/02/16 09:42:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/fun...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/fundacion_logo.jpg
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/02/16 09:42:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/fun...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/fundacion_logo.jpg
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/02/16 09:42:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "control_ninos".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('control_ninos')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/control_ninos
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/02/16 09:43:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/fun...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/fundacion_logo.jpg
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/02/16 09:43:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/fun...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/fundacion_logo.jpg
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/02/16 09:43:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "control_ninos".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('control_ninos')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/control_ninos
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/02/16 09:48:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/fun...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/fundacion_logo.jpg
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/02/16 09:48:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('control_ninos')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/control_ninos
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/02/16 09:51:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "control_ninos".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('control_ninos')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/control_ninos
+HTTP_REFERER=http://localhost/yii/sapch/control_ninos
+---
+2016/02/16 09:55:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "control_ninos".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('control_ninos')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('control_ninos')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/control_ni...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/control_ninos
+HTTP_REFERER=http://localhost/yii/sapch/visitas
+---
+2016/02/16 09:59:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/fun...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/fundacion_logo.jpg
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/02/16 09:59:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/fun...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/fundacion_logo.jpg
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/02/16 09:59:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "control_ninos".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('control_ninos')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/control_ninos
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/02/16 09:59:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "control_ninos".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('control_ninos')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/control_ninos
+HTTP_REFERER=http://localhost/yii/sapch/control_ninos
+---
+2016/02/16 09:59:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "control_ninos".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('control_ninos')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/control_ninos
+HTTP_REFERER=http://localhost/yii/sapch/control_ninos
+---
+2016/02/16 09:59:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "control_ninos".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('control_ninos')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/control_ninos
+HTTP_REFERER=http://localhost/yii/sapch/control_ninos
+---
+2016/02/16 09:59:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "control_ninos".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('control_ninos')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/control_ninos
+HTTP_REFERER=http://localhost/yii/sapch/control_ninos
+---
+2016/02/16 09:59:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "control_ninos".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('control_ninos')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/control_ninos
+HTTP_REFERER=http://localhost/yii/sapch/control_ninos
+---
+2016/02/16 10:01:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "control_ninos".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('control_ninos')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/control_ninos
+HTTP_REFERER=http://localhost/yii/sapch/control_ninos
+---
+2016/02/16 10:01:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "control_ninos".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('control_ninos')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/control_ninos
+HTTP_REFERER=http://localhost/yii/sapch/control_ninos
+---
+2016/02/16 10:04:37 [error] [php] Undefined variable: dataProvider (C:\xampp\htdocs\yii\sapch\protected\views\control_ninos\index.php:18)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): Control_ninosController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): Control_ninosController->renderPartial()
+#2 C:\xampp\htdocs\yii\sapch\protected\controllers\Control_ninosController.php(14): Control_ninosController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Control_ninosController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): Control_ninosController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): Control_ninosController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): Control_ninosController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\sapch\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/sapch/control_ninos
+in C:\xampp\htdocs\yii\sapch\protected\views\control_ninos\index.php (18)
+in C:\xampp\htdocs\yii\sapch\protected\controllers\Control_ninosController.php (14)
+in C:\xampp\htdocs\yii\sapch\index.php (13)
+2016/02/16 10:24:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/fun...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/fundacion_logo.jpg
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/02/16 10:25:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/fun...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/fundacion_logo.jpg
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---

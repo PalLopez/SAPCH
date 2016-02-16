@@ -3,6 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
+	'Configuración'=>array('/configuracion'),
 	'Areas',
 );
 

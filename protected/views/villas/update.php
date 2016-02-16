@@ -3,6 +3,7 @@
 /* @var $model Villas */
 
 $this->breadcrumbs=array(
+	'Configuración'=>array('/configuracion'),
 	'Villas'=>array('index'),
 	'Actualizar',
 );

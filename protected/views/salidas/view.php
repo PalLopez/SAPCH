@@ -3,7 +3,7 @@
 /* @var $model Salidas */
 
 $this->breadcrumbs=array(
-	'Control de Niños'=>array('/ninos'),
+	'Control de Niños'=>array('/control_ninos'),
 	'Actividades Externas'=>array('index'),
 	'Visualizar',
 );

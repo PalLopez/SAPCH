@@ -3,6 +3,7 @@
 /* @var $model TipoPersonalExterno */
 
 $this->breadcrumbs=array(
+	'Configuración'=>array('/configuracion'),
 	'Tipos de Personal Externo'=>array('index'),
 	'Nuevo',
 );

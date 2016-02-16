@@ -3,13 +3,12 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Control de Niños'=>array('/ninos'),
+	'Control de Niños'=>array('/control_ninos'),
 	'Salidas',
 );
 
 $this->menu=array(
 	array('label'=>'Administrar Salidas', 'url'=>array('admin')),
-	array('label'=>'Regresar', 'url'=>array('/ninos')),
 );
 ?>
 
