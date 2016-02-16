@@ -13,12 +13,12 @@
 	<?php echo CHtml::encode($data->nombre); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('num_villa')); ?>:</b>
-	<?php echo CHtml::encode($data->num_villa); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('genero')); ?>:</b>
 	<?php echo CHtml::encode($data->genero); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('id_villa')); ?>:</b>
+	<?php echo CHtml::encode($data->id_villa); ?>
 	<br />
 
 

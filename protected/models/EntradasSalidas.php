@@ -5,6 +5,7 @@
  *
  * The followings are the available columns in table 'entradas_salidas':
  * @property string $id
+ * @property string $fecha
  * @property string $hr_entrada
  * @property string $hr_salida
  * @property string $id_usuario
@@ -30,12 +31,12 @@ class EntradasSalidas extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('hr_entrada, id_usuario', 'required'),
+			array('fecha, hr_entrada, id_usuario', 'required'),
 			array('id_usuario', 'length', 'max'=>20),
 			array('hr_salida', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, hr_entrada, hr_salida, id_usuario', 'safe', 'on'=>'search'),
+			array('id, fecha, hr_entrada, hr_salida, id_usuario', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,6 +59,7 @@ class EntradasSalidas extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'fecha' => 'Fecha',
 			'hr_entrada' => 'Hr Entrada',
 			'hr_salida' => 'Hr Salida',
 			'id_usuario' => 'Id Usuario',
@@ -83,6 +85,7 @@ class EntradasSalidas extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
+		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('hr_entrada',$this->hr_entrada,true);
 		$criteria->compare('hr_salida',$this->hr_salida,true);
 		$criteria->compare('id_usuario',$this->id_usuario,true);

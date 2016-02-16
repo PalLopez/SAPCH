@@ -22,13 +22,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'num_villa'); ?>
-		<?php echo $form->textField($model,'num_villa'); ?>
+		<?php echo $form->label($model,'genero'); ?>
+		<?php echo $form->textField($model,'genero',array('size'=>1,'maxlength'=>1)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'genero'); ?>
-		<?php echo $form->textField($model,'genero',array('size'=>1,'maxlength'=>1)); ?>
+		<?php echo $form->label($model,'id_villa'); ?>
+		<?php echo $form->textField($model,'id_villa',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
 
 	<div class="row buttons">

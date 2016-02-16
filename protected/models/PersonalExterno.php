@@ -7,11 +7,11 @@
  * @property string $id
  * @property string $nombre
  * @property string $empresa
- * @property string $tipo
  * @property string $genero
+ * @property string $id_tipo_pe
  *
  * The followings are the available model relations:
- * @property Visitas $id0
+ * @property TipoPersonalExterno $idTipoPe
  * @property Visitas[] $visitases
  */
 class PersonalExterno extends CActiveRecord
@@ -32,13 +32,13 @@ class PersonalExterno extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, empresa, tipo, genero', 'required'),
+			array('nombre, empresa, genero, id_tipo_pe', 'required'),
 			array('nombre, empresa', 'length', 'max'=>120),
-			array('tipo', 'length', 'max'=>10),
 			array('genero', 'length', 'max'=>1),
+			array('id_tipo_pe', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nombre, empresa, tipo, genero', 'safe', 'on'=>'search'),
+			array('id, nombre, empresa, genero, id_tipo_pe', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,7 +50,7 @@ class PersonalExterno extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'id0' => array(self::BELONGS_TO, 'Visitas', 'id'),
+			'idTipoPe' => array(self::BELONGS_TO, 'TipoPersonalExterno', 'id_tipo_pe'),
 			'visitases' => array(self::HAS_MANY, 'Visitas', 'id_pe'),
 		);
 	}
@@ -64,8 +64,8 @@ class PersonalExterno extends CActiveRecord
 			'id' => 'ID',
 			'nombre' => 'Nombre',
 			'empresa' => 'Empresa',
-			'tipo' => 'Tipo',
 			'genero' => 'Genero',
+			'id_tipo_pe' => 'Id Tipo Pe',
 		);
 	}
 
@@ -90,8 +90,8 @@ class PersonalExterno extends CActiveRecord
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('empresa',$this->empresa,true);
-		$criteria->compare('tipo',$this->tipo,true);
 		$criteria->compare('genero',$this->genero,true);
+		$criteria->compare('id_tipo_pe',$this->id_tipo_pe,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

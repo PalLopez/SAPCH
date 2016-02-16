@@ -3,20 +3,19 @@
 /* @var $model Salidas */
 
 $this->breadcrumbs=array(
-	'Salidases'=>array('index'),
-	$model->id,
+	'Control de Niños'=>array('/control_ninos'),
+	'Actividades Externas'=>array('index'),
+	'Visualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List Salidas', 'url'=>array('index')),
-	array('label'=>'Create Salidas', 'url'=>array('create')),
-	array('label'=>'Update Salidas', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Salidas', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Salidas', 'url'=>array('admin')),
+	array('label'=>'Actualizar Actividad', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Eliminar Actividad', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Regresar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Salidas #<?php echo $model->id; ?></h1>
+<h1>Visualizar Actividad Externa (ID: <?php echo $model->id; ?>)</h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

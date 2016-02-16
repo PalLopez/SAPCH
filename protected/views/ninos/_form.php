@@ -15,7 +15,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note"><span class="required">*</span> Campos obligatorios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -26,15 +26,15 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'num_villa'); ?>
-		<?php echo $form->textField($model,'num_villa'); ?>
-		<?php echo $form->error($model,'num_villa'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'genero'); ?>
 		<?php echo $form->textField($model,'genero',array('size'=>1,'maxlength'=>1)); ?>
 		<?php echo $form->error($model,'genero'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'id_villa'); ?>
+		<?php echo $form->textField($model,'id_villa',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->error($model,'id_villa'); ?>
 	</div>
 
 	<div class="row buttons">

@@ -3,19 +3,16 @@
 /* @var $model Salidas */
 
 $this->breadcrumbs=array(
-	'Salidases'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'Control de Niños'=>array('/control_ninos'),
+	'Actividades Externas'=>array('index'),
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List Salidas', 'url'=>array('index')),
-	array('label'=>'Create Salidas', 'url'=>array('create')),
-	array('label'=>'View Salidas', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Salidas', 'url'=>array('admin')),
+	array('label'=>'Regresar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Salidas <?php echo $model->id; ?></h1>
+<h1>Actualizar Actividad Externa (ID: <?php echo $model->id; ?>)</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -3,16 +3,16 @@
 /* @var $model Areas */
 
 $this->breadcrumbs=array(
-	'Areases'=>array('index'),
-	'Create',
+	'Configuración'=>array('/configuracion'),
+	'Areas'=>array('index'),
+	'Nuevo',
 );
 
 $this->menu=array(
-	array('label'=>'List Areas', 'url'=>array('index')),
-	array('label'=>'Manage Areas', 'url'=>array('admin')),
+	array('label'=>'Regresar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Areas</h1>
+<h1>Nueva Area</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

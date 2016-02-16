@@ -33,9 +33,9 @@ class Salidas extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('fecha_inicio, hr_salida, motivo, lugar', 'required'),
+			array('fecha_inicio, fecha_fin, hr_salida, motivo, lugar', 'required'),
 			array('lugar', 'length', 'max'=>120),
-			array('fecha_fin, hr_regreso', 'safe'),
+			array('hr_regreso', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, fecha_inicio, fecha_fin, hr_salida, hr_regreso, motivo, lugar', 'safe', 'on'=>'search'),

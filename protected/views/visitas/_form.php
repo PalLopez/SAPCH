@@ -15,7 +15,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note"><span class="required">*</span> Campo obligatorio.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -41,6 +41,12 @@
 		<?php echo $form->labelEx($model,'fecha'); ?>
 		<?php echo $form->textField($model,'fecha'); ?>
 		<?php echo $form->error($model,'fecha'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'agendada'); ?>
+		<?php echo $form->textField($model,'agendada'); ?>
+		<?php echo $form->error($model,'agendada'); ?>
 	</div>
 
 	<div class="row">
