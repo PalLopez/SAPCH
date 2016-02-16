@@ -3,16 +3,16 @@
 /* @var $model Usuarios */
 
 $this->breadcrumbs=array(
-	'Usuarios'=>array('index'),
-	'Nuevo',
+	'Usuarioses'=>array('index'),
+	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'Lista de Usuarios', 'url'=>array('index')),
-	array('label'=>'Regresar', 'url'=>array('admin')),
+	array('label'=>'List Usuarios', 'url'=>array('index')),
+	array('label'=>'Manage Usuarios', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Nuevo Usuario</h1>
+<h1>Create Usuarios</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

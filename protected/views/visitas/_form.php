@@ -44,6 +44,12 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'agendada'); ?>
+		<?php echo $form->textField($model,'agendada'); ?>
+		<?php echo $form->error($model,'agendada'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'id_pe'); ?>
 		<?php echo $form->textField($model,'id_pe',array('size'=>20,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'id_pe'); ?>

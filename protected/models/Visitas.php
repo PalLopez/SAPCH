@@ -9,13 +9,13 @@
  * @property string $hr_salida
  * @property string $motivo
  * @property string $fecha
+ * @property integer $agendada
  * @property string $id_pe
  * @property string $id_nino
  *
  * The followings are the available model relations:
- * @property PersonalExterno $personalExterno
- * @property PersonalExterno $idPe
  * @property Ninos $idNino
+ * @property PersonalExterno $idPe
  */
 class Visitas extends CActiveRecord
 {
@@ -35,12 +35,13 @@ class Visitas extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('hr_entrada, motivo, fecha', 'required'),
+			array('hr_entrada, motivo, fecha, agendada, id_pe', 'required'),
+			array('agendada', 'numerical', 'integerOnly'=>true),
 			array('id_pe, id_nino', 'length', 'max'=>20),
 			array('hr_salida', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, hr_entrada, hr_salida, motivo, fecha, id_pe, id_nino', 'safe', 'on'=>'search'),
+			array('id, hr_entrada, hr_salida, motivo, fecha, agendada, id_pe, id_nino', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,9 +53,8 @@ class Visitas extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'personalExterno' => array(self::HAS_ONE, 'PersonalExterno', 'id'),
-			'idPe' => array(self::BELONGS_TO, 'PersonalExterno', 'id_pe'),
 			'idNino' => array(self::BELONGS_TO, 'Ninos', 'id_nino'),
+			'idPe' => array(self::BELONGS_TO, 'PersonalExterno', 'id_pe'),
 		);
 	}
 
@@ -69,6 +69,7 @@ class Visitas extends CActiveRecord
 			'hr_salida' => 'Hr Salida',
 			'motivo' => 'Motivo',
 			'fecha' => 'Fecha',
+			'agendada' => 'Agendada',
 			'id_pe' => 'Id Pe',
 			'id_nino' => 'Id Nino',
 		);
@@ -97,6 +98,7 @@ class Visitas extends CActiveRecord
 		$criteria->compare('hr_salida',$this->hr_salida,true);
 		$criteria->compare('motivo',$this->motivo,true);
 		$criteria->compare('fecha',$this->fecha,true);
+		$criteria->compare('agendada',$this->agendada);
 		$criteria->compare('id_pe',$this->id_pe,true);
 		$criteria->compare('id_nino',$this->id_nino,true);
 

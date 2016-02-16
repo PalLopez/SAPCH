@@ -25,13 +25,19 @@
 	<?php echo CHtml::encode($data->fecha); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('agendada')); ?>:</b>
+	<?php echo CHtml::encode($data->agendada); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('id_pe')); ?>:</b>
 	<?php echo CHtml::encode($data->id_pe); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('id_nino')); ?>:</b>
 	<?php echo CHtml::encode($data->id_nino); ?>
 	<br />
 
+	*/ ?>
 
 </div>

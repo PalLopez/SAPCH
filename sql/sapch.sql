@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.4.12
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-01-2016 a las 19:56:01
--- Versión del servidor: 10.1.9-MariaDB
--- Versión de PHP: 5.6.15
+-- Tiempo de generación: 16-02-2016 a las 07:50:45
+-- Versión del servidor: 5.6.25
+-- Versión de PHP: 5.6.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `areas`
 --
 
-CREATE TABLE `areas` (
+CREATE TABLE IF NOT EXISTS `areas` (
   `id` bigint(20) NOT NULL,
   `nombre` varchar(120) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -37,10 +37,11 @@ CREATE TABLE `areas` (
 -- Estructura de tabla para la tabla `entradas_salidas`
 --
 
-CREATE TABLE `entradas_salidas` (
+CREATE TABLE IF NOT EXISTS `entradas_salidas` (
   `id` bigint(20) NOT NULL,
-  `hr_entrada` date NOT NULL,
-  `hr_salida` date DEFAULT NULL,
+  `fecha` date NOT NULL,
+  `hr_entrada` time NOT NULL,
+  `hr_salida` time DEFAULT NULL,
   `id_usuario` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -50,7 +51,7 @@ CREATE TABLE `entradas_salidas` (
 -- Estructura de tabla para la tabla `logs`
 --
 
-CREATE TABLE `logs` (
+CREATE TABLE IF NOT EXISTS `logs` (
   `id` bigint(20) NOT NULL,
   `log` text NOT NULL,
   `id_usuario` bigint(20) NOT NULL
@@ -59,24 +60,24 @@ CREATE TABLE `logs` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `niños`
+-- Estructura de tabla para la tabla `ninos`
 --
 
-CREATE TABLE `niños` (
+CREATE TABLE IF NOT EXISTS `ninos` (
   `id` bigint(20) NOT NULL,
   `nombre` varchar(120) NOT NULL,
-  `num_villa` int(2) NOT NULL,
-  `genero` char(1) NOT NULL
+  `genero` char(1) NOT NULL,
+  `id_villa` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `niños_salidas`
+-- Estructura de tabla para la tabla `ninos_salidas`
 --
 
-CREATE TABLE `niños_salidas` (
-  `id_niño` bigint(20) NOT NULL,
+CREATE TABLE IF NOT EXISTS `ninos_salidas` (
+  `id_nino` bigint(20) NOT NULL,
   `id_salida` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -86,12 +87,12 @@ CREATE TABLE `niños_salidas` (
 -- Estructura de tabla para la tabla `personal_externo`
 --
 
-CREATE TABLE `personal_externo` (
+CREATE TABLE IF NOT EXISTS `personal_externo` (
   `id` bigint(20) NOT NULL,
   `nombre` varchar(120) NOT NULL,
   `empresa` varchar(120) NOT NULL,
-  `tipo` varchar(2) NOT NULL,
-  `genero` char(1) NOT NULL
+  `genero` char(1) NOT NULL,
+  `id_tipo_pe` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -100,14 +101,25 @@ CREATE TABLE `personal_externo` (
 -- Estructura de tabla para la tabla `salidas`
 --
 
-CREATE TABLE `salidas` (
+CREATE TABLE IF NOT EXISTS `salidas` (
   `id` bigint(20) NOT NULL,
   `fecha_inicio` date NOT NULL,
-  `fecha_fin` date DEFAULT NULL,
-  `hr_salida` date NOT NULL,
-  `hr_regreso` date DEFAULT NULL,
+  `fecha_fin` date NOT NULL,
+  `hr_salida` time NOT NULL,
+  `hr_regreso` time DEFAULT NULL,
   `motivo` text NOT NULL,
   `lugar` varchar(120) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipo_personal_externo`
+--
+
+CREATE TABLE IF NOT EXISTS `tipo_personal_externo` (
+  `id` bigint(20) NOT NULL,
+  `nombre` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -116,14 +128,33 @@ CREATE TABLE `salidas` (
 -- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE `usuarios` (
+CREATE TABLE IF NOT EXISTS `usuarios` (
   `id` bigint(20) NOT NULL,
   `nombre` varchar(120) NOT NULL,
   `tipo_usuario` varchar(2) NOT NULL,
   `num_empleado` int(8) NOT NULL,
   `genero` char(1) NOT NULL,
-  `contraseña` varchar(120) NOT NULL,
-  `id_area` bigint(20) NOT NULL
+  `contrasena` varchar(120) NOT NULL,
+  `id_area` bigint(20) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nombre`, `tipo_usuario`, `num_empleado`, `genero`, `contrasena`, `id_area`) VALUES
+(1, 'Palmira Lopez', 'A', 1, 'F', 'palmira', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `villas`
+--
+
+CREATE TABLE IF NOT EXISTS `villas` (
+  `id` bigint(20) NOT NULL,
+  `numero` int(2) NOT NULL,
+  `nombre` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -132,14 +163,15 @@ CREATE TABLE `usuarios` (
 -- Estructura de tabla para la tabla `visitas`
 --
 
-CREATE TABLE `visitas` (
+CREATE TABLE IF NOT EXISTS `visitas` (
   `id` bigint(20) NOT NULL,
-  `hr_entrada` date NOT NULL,
-  `hr_salida` date DEFAULT NULL,
+  `hr_entrada` time NOT NULL,
+  `hr_salida` time DEFAULT NULL,
   `motivo` text NOT NULL,
   `fecha` date NOT NULL,
-  `id_pe` bigint(20) DEFAULT NULL,
-  `id_niño` bigint(20) DEFAULT NULL
+  `agendada` tinyint(1) NOT NULL,
+  `id_pe` bigint(20) NOT NULL,
+  `id_nino` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -167,28 +199,36 @@ ALTER TABLE `logs`
   ADD KEY `id_usuario` (`id_usuario`);
 
 --
--- Indices de la tabla `niños`
+-- Indices de la tabla `ninos`
 --
-ALTER TABLE `niños`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `ninos`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id_villa` (`id_villa`);
 
 --
--- Indices de la tabla `niños_salidas`
+-- Indices de la tabla `ninos_salidas`
 --
-ALTER TABLE `niños_salidas`
-  ADD UNIQUE KEY `id_niño` (`id_niño`),
+ALTER TABLE `ninos_salidas`
+  ADD UNIQUE KEY `id_niño` (`id_nino`),
   ADD UNIQUE KEY `id_salida` (`id_salida`);
 
 --
 -- Indices de la tabla `personal_externo`
 --
 ALTER TABLE `personal_externo`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id_tipo_pe` (`id_tipo_pe`);
 
 --
 -- Indices de la tabla `salidas`
 --
 ALTER TABLE `salidas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tipo_personal_externo`
+--
+ALTER TABLE `tipo_personal_externo`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -199,11 +239,17 @@ ALTER TABLE `usuarios`
   ADD KEY `id_area` (`id_area`);
 
 --
+-- Indices de la tabla `villas`
+--
+ALTER TABLE `villas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `visitas`
 --
 ALTER TABLE `visitas`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_niño` (`id_niño`),
+  ADD KEY `id_niño` (`id_nino`),
   ADD KEY `id_per` (`id_pe`);
 
 --
@@ -226,9 +272,9 @@ ALTER TABLE `entradas_salidas`
 ALTER TABLE `logs`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `niños`
+-- AUTO_INCREMENT de la tabla `ninos`
 --
-ALTER TABLE `niños`
+ALTER TABLE `ninos`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `personal_externo`
@@ -241,9 +287,19 @@ ALTER TABLE `personal_externo`
 ALTER TABLE `salidas`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT de la tabla `tipo_personal_externo`
+--
+ALTER TABLE `tipo_personal_externo`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT de la tabla `villas`
+--
+ALTER TABLE `villas`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `visitas`
@@ -261,17 +317,23 @@ ALTER TABLE `entradas_salidas`
   ADD CONSTRAINT `entradas_salidas_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`);
 
 --
--- Filtros para la tabla `niños_salidas`
+-- Filtros para la tabla `ninos`
 --
-ALTER TABLE `niños_salidas`
-  ADD CONSTRAINT `niños_salidas_ibfk_1` FOREIGN KEY (`id_niño`) REFERENCES `niños` (`id`),
-  ADD CONSTRAINT `niños_salidas_ibfk_2` FOREIGN KEY (`id_salida`) REFERENCES `salidas` (`id`);
+ALTER TABLE `ninos`
+  ADD CONSTRAINT `ninos_ibfk_1` FOREIGN KEY (`id_villa`) REFERENCES `villas` (`id`);
+
+--
+-- Filtros para la tabla `ninos_salidas`
+--
+ALTER TABLE `ninos_salidas`
+  ADD CONSTRAINT `ninos_salidas_ibfk_1` FOREIGN KEY (`id_nino`) REFERENCES `ninos` (`id`),
+  ADD CONSTRAINT `ninos_salidas_ibfk_2` FOREIGN KEY (`id_salida`) REFERENCES `salidas` (`id`);
 
 --
 -- Filtros para la tabla `personal_externo`
 --
 ALTER TABLE `personal_externo`
-  ADD CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `visitas` (`id_pe`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `personal_externo_ibfk_1` FOREIGN KEY (`id_tipo_pe`) REFERENCES `tipo_personal_externo` (`id`);
 
 --
 -- Filtros para la tabla `usuarios`
@@ -283,8 +345,8 @@ ALTER TABLE `usuarios`
 -- Filtros para la tabla `visitas`
 --
 ALTER TABLE `visitas`
-  ADD CONSTRAINT `visitas_ibfk_1` FOREIGN KEY (`id_pe`) REFERENCES `personal_externo` (`id`),
-  ADD CONSTRAINT `visitas_ibfk_2` FOREIGN KEY (`id_niño`) REFERENCES `niños` (`id`);
+  ADD CONSTRAINT `visitas_ibfk_2` FOREIGN KEY (`id_nino`) REFERENCES `ninos` (`id`),
+  ADD CONSTRAINT `visitas_ibfk_3` FOREIGN KEY (`id_pe`) REFERENCES `personal_externo` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

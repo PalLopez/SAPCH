@@ -26,12 +26,12 @@
 				<?php $this->widget('zii.widgets.CMenu',array(
 					'items'=>array(
 						array('label'=>'Home', 'url'=>array('/site/index')),
-						array('label'=>'Visitas', 'url'=>array('/visitas/admin')),
+						array('label'=>'Visitas', 'url'=>array('/visitas')),
 						array('label'=>'Control de Niños', 'url'=>array('/ninos')),
-						array('label'=>'Personal Externo', 'url'=>array('/personalExterno/admin')),
-						array('label'=>'Personal Interno (Usuarios)', 'url'=>array('/usuarios/admin')),
+						array('label'=>'Personal Externo', 'url'=>array('/personal_externo')),
+						array('label'=>'Personal Interno (Usuarios)', 'url'=>array('/usuarios')),
 						array('label'=>'Entradas/Salidas', 'url'=>array('/entradas_salidas')),
-						array('label'=>'Áreas', 'url'=>array('/areas/admin')),
+						array('label'=>'Configuración', 'url'=>array('/areas')),
 						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 					),

@@ -37,6 +37,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'agendada'); ?>
+		<?php echo $form->textField($model,'agendada'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'id_pe'); ?>
 		<?php echo $form->textField($model,'id_pe',array('size'=>20,'maxlength'=>20)); ?>
 	</div>

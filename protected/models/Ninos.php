@@ -6,10 +6,11 @@
  * The followings are the available columns in table 'ninos':
  * @property string $id
  * @property string $nombre
- * @property integer $num_villa
  * @property string $genero
+ * @property string $id_villa
  *
  * The followings are the available model relations:
+ * @property Villas $idVilla
  * @property NinosSalidas $ninosSalidas
  * @property Visitas[] $visitases
  */
@@ -31,13 +32,13 @@ class Ninos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, num_villa, genero', 'required'),
-			array('num_villa', 'numerical', 'integerOnly'=>true),
+			array('nombre, genero, id_villa', 'required'),
 			array('nombre', 'length', 'max'=>120),
 			array('genero', 'length', 'max'=>1),
+			array('id_villa', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nombre, num_villa, genero', 'safe', 'on'=>'search'),
+			array('id, nombre, genero, id_villa', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -49,6 +50,7 @@ class Ninos extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'idVilla' => array(self::BELONGS_TO, 'Villas', 'id_villa'),
 			'ninosSalidas' => array(self::HAS_ONE, 'NinosSalidas', 'id_nino'),
 			'visitases' => array(self::HAS_MANY, 'Visitas', 'id_nino'),
 		);
@@ -62,8 +64,8 @@ class Ninos extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nombre' => 'Nombre',
-			'num_villa' => 'Num Villa',
 			'genero' => 'Genero',
+			'id_villa' => 'Id Villa',
 		);
 	}
 
@@ -87,8 +89,8 @@ class Ninos extends CActiveRecord
 
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('nombre',$this->nombre,true);
-		$criteria->compare('num_villa',$this->num_villa);
 		$criteria->compare('genero',$this->genero,true);
+		$criteria->compare('id_villa',$this->id_villa,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

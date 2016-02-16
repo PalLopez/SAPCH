@@ -3,16 +3,16 @@
 /* @var $model Ninos */
 
 $this->breadcrumbs=array(
-	'Control de Niños'=>array('index'),
-	'Gestionar Niños'=>array('admin'),
-	'Nuevo',
+	'Ninoses'=>array('index'),
+	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'Regresar', 'url'=>array('admin')),
+	array('label'=>'List Ninos', 'url'=>array('index')),
+	array('label'=>'Manage Ninos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Nuevo Niño</h1>
+<h1>Create Ninos</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

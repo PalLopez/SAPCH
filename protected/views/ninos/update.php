@@ -3,17 +3,19 @@
 /* @var $model Ninos */
 
 $this->breadcrumbs=array(
-	'Control de Niños'=>array('index'),
-	'Gestionar Niños'=>array('admin'),
-	'Actualizar',
+	'Ninoses'=>array('index'),
+	$model->id=>array('view','id'=>$model->id),
+	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'Visualizar Niño', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Regresar', 'url'=>array('admin')),
+	array('label'=>'List Ninos', 'url'=>array('index')),
+	array('label'=>'Create Ninos', 'url'=>array('create')),
+	array('label'=>'View Ninos', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Manage Ninos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Actualizar Niño (<?php echo $model->nombre; ?>)</h1>
+<h1>Update Ninos <?php echo $model->id; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

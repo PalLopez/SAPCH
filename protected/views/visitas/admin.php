@@ -8,9 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Nueva Visita', 'url'=>array('create')),
-	array('label'=>'Lista de Visitas', 'url'=>array('index')),
-	array('label'=>'Angenda de Visitas', 'url'=>array('')),
+	array('label'=>'List Visitas', 'url'=>array('index')),
+	array('label'=>'Create Visitas', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -51,8 +50,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'hr_salida',
 		'motivo',
 		'fecha',
-		'id_pe',
+		'agendada',
 		/*
+		'id_pe',
 		'id_nino',
 		*/
 		array(

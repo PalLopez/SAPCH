@@ -3,13 +3,13 @@
 /* @var $model Areas */
 
 $this->breadcrumbs=array(
-	'Áreas'=>array('index'),
-	'Gestión',
+	'Areas'=>array('index'),
+	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'Nueva Área', 'url'=>array('create')),
-	array('label'=>'Lista de Áreas', 'url'=>array('index')),
+	array('label'=>'Nueva Area', 'url'=>array('create')),
+	array('label'=>'Lista de Areas', 'url'=>array('index')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,9 +26,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Gestionar Áreas</h1>
+<h1>Administrar Areas</h1>
 
-<?php echo CHtml::link('Búsqueda Avanzada','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Busqueda Avanzada','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
