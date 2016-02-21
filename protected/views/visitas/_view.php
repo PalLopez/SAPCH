@@ -33,11 +33,4 @@
 	<?php echo CHtml::encode($data->id_pe); ?>
 	<br />
 
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id_nino')); ?>:</b>
-	<?php echo CHtml::encode($data->id_nino); ?>
-	<br />
-
-	*/ ?>
-
 </div>

@@ -55,12 +55,6 @@
 		<?php echo $form->error($model,'id_pe'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_nino'); ?>
-		<?php echo $form->dropDownList($model,'id_nino',CHtml::listData(Ninos::model()->findAll(),'id','nombre'),array('empty'=>'Seleccione un niño')); ?>
-		<?php echo $form->error($model,'id_nino'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

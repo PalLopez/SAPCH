@@ -12,7 +12,6 @@
  * The followings are the available model relations:
  * @property Villas $idVilla
  * @property NinosSalidas $ninosSalidas
- * @property Visitas[] $visitases
  */
 class Ninos extends CActiveRecord
 {
@@ -52,7 +51,6 @@ class Ninos extends CActiveRecord
 		return array(
 			'idVilla' => array(self::BELONGS_TO, 'Villas', 'id_villa'),
 			'ninosSalidas' => array(self::HAS_ONE, 'NinosSalidas', 'id_nino'),
-			'visitases' => array(self::HAS_MANY, 'Visitas', 'id_nino'),
 		);
 	}
 

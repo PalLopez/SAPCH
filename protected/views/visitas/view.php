@@ -26,6 +26,5 @@ $this->menu=array(
 		'fecha',
 		'agendada',
 		'id_pe',
-		'id_nino',
 	),
 )); ?>

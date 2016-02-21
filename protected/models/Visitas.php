@@ -11,11 +11,9 @@
  * @property string $fecha
  * @property integer $agendada
  * @property string $id_pe
- * @property string $id_nino
  *
  * The followings are the available model relations:
    @property PersonalExterno $idPe
- * @property Ninos $idNino
  */
 class Visitas extends CActiveRecord
 {
@@ -37,11 +35,11 @@ class Visitas extends CActiveRecord
 		return array(
 			array('hr_entrada, motivo, fecha, agendada, id_pe', 'required'),
 			array('agendada', 'numerical', 'integerOnly'=>true),
-			array('id_pe, id_nino', 'length', 'max'=>20),
+			array('id_pe', 'length', 'max'=>20),
 			array('hr_salida', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, hr_entrada, hr_salida, motivo, fecha, agendada, id_pe, id_nino', 'safe', 'on'=>'search'),
+			array('id, hr_entrada, hr_salida, motivo, fecha, agendada, id_pe', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,7 +52,6 @@ class Visitas extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'idPe' => array(self::BELONGS_TO, 'PersonalExterno', 'id_pe'),
-			'idNino' => array(self::BELONGS_TO, 'Ninos', 'id_nino'),
 		);
 	}
 
@@ -71,7 +68,6 @@ class Visitas extends CActiveRecord
 			'fecha' => 'Fecha',
 			'agendada' => 'Agendada',
 			'id_pe' => 'Id Pe',
-			'id_nino' => 'Id Nino',
 		);
 	}
 
@@ -100,7 +96,6 @@ class Visitas extends CActiveRecord
 		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('agendada',$this->agendada);
 		$criteria->compare('id_pe',$this->id_pe,true);
-		$criteria->compare('id_nino',$this->id_nino,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

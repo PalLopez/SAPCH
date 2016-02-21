@@ -48,7 +48,6 @@ $('.search-form form').submit(function(){
 		'agendada',
 		/*
 		'id_pe',
-		'id_nino',
 		*/
 		array(
 			'class'=>'CButtonColumn',
