@@ -2442,3 +2442,58 @@ Stack trace:
 REQUEST_URI=/yii/sapch/site/images/fundacion_logo.jpg
 HTTP_REFERER=http://localhost:8080/yii/sapch/site/index
 ---
+2016/02/21 19:28:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/fun...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/fundacion_logo.jpg
+HTTP_REFERER=http://localhost:8080/yii/sapch/site/index
+---
+2016/02/21 19:35:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/cas...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/casahogar_logo.png
+HTTP_REFERER=http://localhost:8080/yii/sapch/site/index
+---
+2016/02/21 19:35:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/cas...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/casahogar_logo.png
+HTTP_REFERER=http://localhost:8080/yii/sapch/site/index
+---
+2016/02/21 19:35:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/cas...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/casahogar_logo.png
+HTTP_REFERER=http://localhost:8080/yii/sapch/site/index
+---
+2016/02/21 19:36:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/cas...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/casahogar_logo.png
+HTTP_REFERER=http://localhost:8080/yii/sapch/site/index
+---
