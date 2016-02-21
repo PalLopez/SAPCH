@@ -21,25 +21,25 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fecha'); ?>
-		<?php echo $form->textField($model,'fecha'); ?>
+		<?php echo $form->dateField($model,'fecha'); ?>
 		<?php echo $form->error($model,'fecha'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'hr_entrada'); ?>
-		<?php echo $form->textField($model,'hr_entrada'); ?>
+		<?php echo $form->timeField($model,'hr_entrada'); ?>
 		<?php echo $form->error($model,'hr_entrada'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'hr_salida'); ?>
-		<?php echo $form->textField($model,'hr_salida'); ?>
+		<?php echo $form->timeField($model,'hr_salida'); ?>
 		<?php echo $form->error($model,'hr_salida'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_usuario'); ?>
-		<?php echo $form->textField($model,'id_usuario',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->dropDownList($model,'id_usuario',CHtml::listData(Usuarios::model()->findAll(),'id','nombre'),array('empty'=>'Seleccione un usuario')); ?>
 		<?php echo $form->error($model,'id_usuario'); ?>
 	</div>
 

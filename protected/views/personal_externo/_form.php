@@ -33,13 +33,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'genero'); ?>
-		<?php echo $form->textField($model,'genero',array('size'=>1,'maxlength'=>1)); ?>
+		<?php echo $form->dropDownList($model,'genero',array('0'=>'Seleccione el sexo','F'=>'F','M'=>'M')); ?>
 		<?php echo $form->error($model,'genero'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_tipo_pe'); ?>
-		<?php echo $form->textField($model,'id_tipo_pe',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->dropDownList($model,'id_tipo_pe',CHtml::listData(TipoPersonalExterno::model()->findAll(),'id','nombre'),array('empty'=>'Seleccione un tipo de personal externo')); ?>
 		<?php echo $form->error($model,'id_tipo_pe'); ?>
 	</div>
 

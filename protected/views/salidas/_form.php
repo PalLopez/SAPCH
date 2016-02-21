@@ -21,25 +21,25 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fecha_inicio'); ?>
-		<?php echo $form->textField($model,'fecha_inicio'); ?>
+		<?php echo $form->dateField($model,'fecha_inicio'); ?>
 		<?php echo $form->error($model,'fecha_inicio'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fecha_fin'); ?>
-		<?php echo $form->textField($model,'fecha_fin'); ?>
+		<?php echo $form->dateField($model,'fecha_fin'); ?>
 		<?php echo $form->error($model,'fecha_fin'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'hr_salida'); ?>
-		<?php echo $form->textField($model,'hr_salida'); ?>
+		<?php echo $form->timeField($model,'hr_salida'); ?>
 		<?php echo $form->error($model,'hr_salida'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'hr_regreso'); ?>
-		<?php echo $form->textField($model,'hr_regreso'); ?>
+		<?php echo $form->timeField($model,'hr_regreso'); ?>
 		<?php echo $form->error($model,'hr_regreso'); ?>
 	</div>
 

@@ -4,6 +4,7 @@
  * This is the model class for table "ninos_salidas".
  *
  * The followings are the available columns in table 'ninos_salidas':
+   @property string $id
  * @property string $id_nino
  * @property string $id_salida
  *
@@ -33,7 +34,7 @@ class NinosSalidas extends CActiveRecord
 			array('id_nino, id_salida', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_nino, id_salida', 'safe', 'on'=>'search'),
+			array('id, id_nino, id_salida', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,6 +57,7 @@ class NinosSalidas extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'id' => 'ID',
 			'id_nino' => 'Id Nino',
 			'id_salida' => 'Id Salida',
 		);
@@ -79,6 +81,7 @@ class NinosSalidas extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('id',$this->id,true);
 		$criteria->compare('id_nino',$this->id_nino,true);
 		$criteria->compare('id_salida',$this->id_salida,true);
 

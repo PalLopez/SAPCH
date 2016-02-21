@@ -27,13 +27,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'genero'); ?>
-		<?php echo $form->textField($model,'genero',array('size'=>1,'maxlength'=>1)); ?>
+		<?php echo $form->dropDownList($model,'genero',array('0'=>'Seleccione el sexo','F'=>'F','M'=>'M')); ?>
 		<?php echo $form->error($model,'genero'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_villa'); ?>
-		<?php echo $form->textField($model,'id_villa',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->dropDownList($model,'id_villa',CHtml::listData(Villas::model()->findAll(),'id','numero'),array('empty'=>'Seleccione una villa')); ?>
 		<?php echo $form->error($model,'id_villa'); ?>
 	</div>
 

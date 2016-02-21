@@ -14,8 +14,8 @@
  * @property string $id_nino
  *
  * The followings are the available model relations:
+   @property PersonalExterno $idPe
  * @property Ninos $idNino
- * @property PersonalExterno $idPe
  */
 class Visitas extends CActiveRecord
 {
@@ -53,8 +53,8 @@ class Visitas extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idNino' => array(self::BELONGS_TO, 'Ninos', 'id_nino'),
 			'idPe' => array(self::BELONGS_TO, 'PersonalExterno', 'id_pe'),
+			'idNino' => array(self::BELONGS_TO, 'Ninos', 'id_nino'),
 		);
 	}
 

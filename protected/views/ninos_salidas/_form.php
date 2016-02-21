@@ -21,13 +21,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_nino'); ?>
-		<?php echo $form->textField($model,'id_nino',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->dropDownList($model,'id_nino',CHtml::listData(Ninos::model()->findAll(),'id','nombre'),array('empty'=>'Seleccione un niño')); ?>
 		<?php echo $form->error($model,'id_nino'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_salida'); ?>
-		<?php echo $form->textField($model,'id_salida',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->dropDownList($model,'id_salida',CHtml::listData(Salidas::model()->findAll(),'id','id'),array('empty'=>'Seleccione una salida')); ?>
 		<?php echo $form->error($model,'id_salida'); ?>
 	</div>
 

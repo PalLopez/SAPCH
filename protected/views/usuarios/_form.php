@@ -27,7 +27,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tipo_usuario'); ?>
-		<?php echo $form->textField($model,'tipo_usuario',array('size'=>2,'maxlength'=>2)); ?>
+		<?php echo $form->dropDownList($model,'tipo_usuario',array('0'=>'Seleccione el tipo de usuario','A'=>'Administrador','S'=>'Seguridad','C'=>'Colaborador')); ?>
 		<?php echo $form->error($model,'tipo_usuario'); ?>
 	</div>
 
@@ -39,19 +39,19 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'genero'); ?>
-		<?php echo $form->textField($model,'genero',array('size'=>1,'maxlength'=>1)); ?>
+		<?php echo $form->dropDownList($model,'genero',array('0'=>'Seleccione el sexo','F'=>'F','M'=>'M')); ?>
 		<?php echo $form->error($model,'genero'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'contrasena'); ?>
-		<?php echo $form->textField($model,'contrasena',array('size'=>60,'maxlength'=>120)); ?>
+		<?php echo $form->passwordField($model,'contrasena',array('size'=>60,'maxlength'=>120)); ?>
 		<?php echo $form->error($model,'contrasena'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_area'); ?>
-		<?php echo $form->textField($model,'id_area',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->dropDownList($model,'id_area',CHtml::listData(Areas::model()->findAll(),'id','nombre'),array('empty'=>'Seleccione un área')); ?>
 		<?php echo $form->error($model,'id_area'); ?>
 	</div>
 

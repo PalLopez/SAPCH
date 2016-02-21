@@ -21,13 +21,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'hr_entrada'); ?>
-		<?php echo $form->textField($model,'hr_entrada'); ?>
+		<?php echo $form->timeField($model,'hr_entrada'); ?>
 		<?php echo $form->error($model,'hr_entrada'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'hr_salida'); ?>
-		<?php echo $form->textField($model,'hr_salida'); ?>
+		<?php echo $form->timeField($model,'hr_salida'); ?>
 		<?php echo $form->error($model,'hr_salida'); ?>
 	</div>
 
@@ -39,7 +39,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fecha'); ?>
-		<?php echo $form->textField($model,'fecha'); ?>
+		<?php echo $form->dateField($model,'fecha'); ?>
 		<?php echo $form->error($model,'fecha'); ?>
 	</div>
 
@@ -51,13 +51,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_pe'); ?>
-		<?php echo $form->textField($model,'id_pe',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->dropDownList($model,'id_pe',CHtml::listData(PersonalExterno::model()->findAll(),'id','nombre'),array('empty'=>'Seleccione un personal externo')); ?>
 		<?php echo $form->error($model,'id_pe'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_nino'); ?>
-		<?php echo $form->textField($model,'id_nino',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->dropDownList($model,'id_nino',CHtml::listData(Ninos::model()->findAll(),'id','nombre'),array('empty'=>'Seleccione un niño')); ?>
 		<?php echo $form->error($model,'id_nino'); ?>
 	</div>
 

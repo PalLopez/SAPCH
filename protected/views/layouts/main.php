@@ -31,7 +31,7 @@
 						array('label'=>'Personal Externo', 'url'=>array('/personal_externo')),
 						array('label'=>'Personal Interno (Usuarios)', 'url'=>array('/usuarios')),
 						array('label'=>'Entradas/Salidas', 'url'=>array('/entradas_salidas')),
-						array('label'=>'Configuración', 'url'=>array('/configuracion')),
+						array('label'=>'Otras Opciones', 'url'=>array('/configuracion')),
 						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 					),
