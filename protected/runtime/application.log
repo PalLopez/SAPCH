@@ -2376,3 +2376,65 @@ Stack trace:
 REQUEST_URI=/yii/sapch/site/images/fundacion_logo.jpg
 HTTP_REFERER=http://localhost/yii/sapch/site/index
 ---
+2016/03/05 20:47:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/cas...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/casahogar_logo.png
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/03/06 05:48:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/cas...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/casahogar_logo.png
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/03/06 05:58:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/cas...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/casahogar_logo.png
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/03/06 05:58:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/cas...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/site/images/casahogar_logo.png
+HTTP_REFERER=http://localhost/yii/sapch/site/index
+---
+2016/03/06 05:59:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sapch".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('sapch')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/sapch
+HTTP_REFERER=http://localhost/yii/sapch/
+---
+2016/03/06 05:59:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sapch".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('sapch')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\sapch\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/sapch/sapch
+HTTP_REFERER=http://localhost/yii/sapch/
+---

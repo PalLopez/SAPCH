@@ -25,7 +25,7 @@
 			<div id="mainmenu">
 				<?php $this->widget('zii.widgets.CMenu',array(
 					'items'=>array(
-						array('label'=>'Home', 'url'=>array('/site/index')),
+						array('label'=>'Home', 'url'=>array('/')),
 						array('label'=>'Visitas', 'url'=>array('/visitas')),
 						array('label'=>'Control de Niños', 'url'=>array('/control_ninos')),
 						array('label'=>'Personal Externo', 'url'=>array('/personal_externo')),
@@ -51,6 +51,7 @@
 			<div id="footer">
 				Copyright &copy; <?php echo date('Y'); ?> Fundación Palace.<br/>
 				All Rights Reserved.<br/>
+				Desarrollado por Palmira Maritza López González<br/>
 				<?php echo Yii::powered(); ?>
 			</div><!-- footer -->
 
