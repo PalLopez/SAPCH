@@ -66,10 +66,10 @@ body
 {
 	color:#ffffff;
 	background-color:transparent;
-	font-size:12px;
+	font-size:15px;
 	font-weight:bold;
 	text-decoration:none;
-	padding:5px 8px;
+	padding:5px 20px;
 }
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a

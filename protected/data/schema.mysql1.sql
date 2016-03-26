@@ -340,9 +340,7 @@ ALTER TABLE `ninos_salidas`
 --
 -- AUTO_INCREMENT de la tabla `personal_externo`
 --
-ALTER TABLE `personal_externo`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
+
 -- AUTO_INCREMENT de la tabla `salidas`
 --
 ALTER TABLE `salidas`
@@ -360,9 +358,7 @@ ALTER TABLE `usuarios`
 --
 -- AUTO_INCREMENT de la tabla `villas`
 --
-ALTER TABLE `villas`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
+
 -- AUTO_INCREMENT de la tabla `visitas`
 --
 ALTER TABLE `visitas`
@@ -380,15 +376,11 @@ ALTER TABLE `entradas_salidas`
 --
 -- Filtros para la tabla `ninos`
 --
-ALTER TABLE `ninos`
-  ADD CONSTRAINT `ninos_ibfk_1` FOREIGN KEY (`id_villa`) REFERENCES `villas` (`id`);
+
 
 --
 -- Filtros para la tabla `ninos_salidas`
 --
-ALTER TABLE `ninos_salidas`
-  ADD CONSTRAINT `ninos_salidas_ibfk_1` FOREIGN KEY (`id_nino`) REFERENCES `ninos` (`id`),
-  ADD CONSTRAINT `ninos_salidas_ibfk_2` FOREIGN KEY (`id_salida`) REFERENCES `salidas` (`id`);
 
 --
 -- Filtros para la tabla `personal_externo`
@@ -405,8 +397,7 @@ ALTER TABLE `usuarios`
 --
 -- Filtros para la tabla `visitas`
 --
-ALTER TABLE `visitas`
-  ADD CONSTRAINT `visitas_ibfk_1` FOREIGN KEY (`id_pe`) REFERENCES `personal_externo` (`id`);
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

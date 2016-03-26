@@ -41,9 +41,7 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
 		'numero',
-		'nombre',
 		array(
 			'class'=>'CButtonColumn',
 		),
