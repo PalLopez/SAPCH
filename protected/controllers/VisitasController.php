@@ -120,11 +120,15 @@ class VisitasController extends Controller
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex()
+	public function actionIndex() /*aqui se pega*/
 	{
-		$dataProvider=new CActiveDataProvider('Visitas');
+		$model=new Visitas('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Visitas']))
+			$model->attributes=$_GET['Visitas'];
+
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 
@@ -140,7 +144,7 @@ class VisitasController extends Controller
 
 		$this->render('admin',array(
 			'model'=>$model,
-		));
+		)); /* se copia esto y se pega en actionindex*/
 	}
 
 	/**

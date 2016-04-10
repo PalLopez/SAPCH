@@ -9,8 +9,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Actualizar Area', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Eliminar Area', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Actualizar área', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Eliminar área', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Desea eliminar este registro?')),
 	array('label'=>'Regresar', 'url'=>array('admin')),
 );
 ?>

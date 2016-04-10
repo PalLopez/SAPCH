@@ -75,6 +75,14 @@ class Usuarios extends CActiveRecord
 		);
 	}
 
+	public function beforeSave(){
+
+		$this->contrasena = sha1($this->contrasena);
+
+		return parent::beforeSave();
+
+	}
+
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 *

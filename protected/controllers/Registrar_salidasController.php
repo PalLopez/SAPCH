@@ -1,12 +1,11 @@
 <?php
 
-class EntradasController extends Controller
+class Registrar_salidasController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -28,7 +27,7 @@ class EntradasController extends Controller
 	{
 		return array(
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('index', 'create'),
+				'actions'=>array('index','update'),
 				'users'=>array('*'),
 			),
 			array('deny',  // deny all users
@@ -37,14 +36,14 @@ class EntradasController extends Controller
 		);
 	}
 
-
 	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 * Updates a particular model.
+	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionCreate()
+	public function actionUpdate($id)
 	{
-		$model=new EntradasSalidas;
+		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -53,10 +52,10 @@ class EntradasController extends Controller
 		{
 			$model->attributes=$_POST['EntradasSalidas'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect('../');
 		}
 
-		$this->render('create',array(
+		$this->render('update',array(
 			'model'=>$model,
 		));
 	}
@@ -66,23 +65,12 @@ class EntradasController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('EntradasSalidas');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
-	}
-
-	/**
-	 * Manages all models.
-	 */
-	public function actionAdmin()
-	{
 		$model=new EntradasSalidas('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['EntradasSalidas']))
 			$model->attributes=$_GET['EntradasSalidas'];
 
-		$this->render('admin',array(
+		$this->render('index',array(
 			'model'=>$model,
 		));
 	}

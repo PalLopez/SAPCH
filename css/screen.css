@@ -25,12 +25,12 @@
     height: 50%;
 }
 
-.login-second-content {
-    width: 300px;
+.login-second-content { /*Login color*/
+    width: 450px;
     height: auto;
     margin: auto;
-    padding: 20px;
-    background-color: #f2f2f2;
+    padding: 30px;
+    background-color: #EEEEEE;
 }
 
 .login-second-content #LoginForm_username,

@@ -23,29 +23,35 @@
 	padding: 0.3em;
 }
 
-.grid-view table.items th
+.grid-view table.items th /*color de donde estan los atributos id,nombre etc.*/
 {
 	color: white;
-	background: url("bg.gif") repeat-x scroll left top white;
+	background-color: #757575
+;
 	text-align: center;
+
+	border-radius: 5px;
 }
 
-.grid-view table.items th a
+.grid-view table.items th a /* color de letras de la tabla*/
 {
-	color: #EEE;
+	color: WHITE;
 	font-weight: bold;
 	text-decoration: none;
+
 }
 
 .grid-view table.items th a:hover
 {
 	color: #FFF;
+
 }
 
 .grid-view table.items th a.asc
 {
 	background:url(up.gif) right center no-repeat;
 	padding-right: 10px;
+	border-radius: 8px;
 }
 
 .grid-view table.items th a.desc
@@ -56,27 +62,28 @@
 
 .grid-view table.items tr.even
 {
-	background: #F8F8F8;
+	background: #E0E0E0;
 }
 
-.grid-view table.items tr.odd
+.grid-view table.items tr.odd /*Color de  donde aparece el registro*/
 {
-	background: #E5F1F4;
+	background: #F5F5F5;
 }
 
 .grid-view table.items tr.selected
 {
-	background: #BCE774;
+	background: #F8BBD0;
 }
 
 .grid-view table.items tr:hover.selected
 {
-	background: #CCFF66;
+	background: #F8BBD0;
 }
 
-.grid-view table.items tbody tr:hover
+.grid-view table.items tbody tr:hover /*Color cuando seleccionas*/
 {
-	background: #ECFBD4;
+	background: #c6c6c6;
+
 }
 
 .grid-view .link-column img
@@ -88,22 +95,26 @@
 {
 	text-align: center;
 	width: 60px;
+
 }
 
 .grid-view .button-column img
 {
 	border: 0;
+
 }
 
 .grid-view .checkbox-column
 {
 	width: 15px;
+
 }
 
 .grid-view .summary
 {
 	margin: 0 0 5px 0;
 	text-align: right;
+
 }
 
 .grid-view .pager
@@ -122,4 +133,5 @@
 {
 	width: 100%;
 	border: 1px solid #ccc;
+	border-radius: 2px;
 }

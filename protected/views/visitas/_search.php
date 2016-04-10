@@ -17,7 +17,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'hr_entrada'); ?>
+		<?php echo $form->label($model,'hora de entrada'); ?>
 		<?php echo $form->textField($model,'hr_entrada'); ?>
 	</div>
 

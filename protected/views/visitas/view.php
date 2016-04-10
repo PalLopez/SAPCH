@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Actualizar Visita', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Eliminar Visita', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Actualizar visita', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Eliminar visita', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Desea eliminar este registro?')),
 	array('label'=>'Regresar', 'url'=>array('admin')),
 );
 ?>

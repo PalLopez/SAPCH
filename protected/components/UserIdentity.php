@@ -18,8 +18,9 @@ class UserIdentity extends CUserIdentity
 	public function authenticate()
 	{
 		$conn = Yii::app()->db;
-		$query = "SELECT * FROM usuarios WHERE num_empleado='" . $this->username . "' AND contrasena='" . $this->password . "'";
+		$query = "SELECT * FROM usuarios WHERE num_empleado='" . $this->username . "' AND contrasena='" . $this->password = sha1($this->password).  "'";
 		$result = $conn->createCommand($query)->query();
+
 		$result->bindColumn(1, $this->username);
 		$result->bindColumn(2, $this->password);
 		while($result->read()!==false) {

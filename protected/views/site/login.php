@@ -42,3 +42,17 @@ $this->pageTitle=Yii::app()->name . ' - Login';
 		<?php $this->endWidget(); ?>
 	</div>
 </div><!-- form -->
+<div class="content-bubbles">
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>

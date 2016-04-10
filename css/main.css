@@ -70,6 +70,8 @@ body
 	font-weight:bold;
 	text-decoration:none;
 	padding:5px 20px;
+	/*box-shadow: 2px 0px 2px;*/
+
 }
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a
@@ -78,6 +80,7 @@ body
 	background-color:#fff;
 	text-decoration:none;
 	border-radius: 5px;
+
 }
 
 div.flash-error, div.flash-notice, div.flash-success
@@ -92,6 +95,7 @@ div.flash-error
 	background:#FBE3E4;
 	color:#8a1f11;
 	border-color:#FBC2C4;
+
 }
 
 div.flash-notice
@@ -161,17 +165,18 @@ div.search-form
 .portlet-decoration
 {
 	padding: 3px 8px;
-	background: #B7D6E7;
-	border-left: 5px solid #6FACCF;
+	background:  #757575;
+	border-left: 5px solid #c6c6c6;
+	border-radius: 2px;
 }
 
 .portlet-title
 {
-	font-size: 12px;
+	font-size: 15px;
 	font-weight: bold;
 	padding: 0;
 	margin: 0;
-	color: #298dcd;
+	color: #fffcfd;
 }
 
 .portlet-content
@@ -179,7 +184,7 @@ div.search-form
 	font-size:0.9em;
 	margin: 0 0 15px 0;
 	padding: 5px 8px;
-	background:#EFFDFF;
+	background: #F5F5F5;
 }
 
 .portlet-content ul
@@ -211,7 +216,7 @@ div.search-form
 .operations li a
 {
 	font: bold 12px Arial;
-	color: #0066A4;
+	color: black;
 	display: block;
 	padding: 2px 0 2px 8px;
 	line-height: 15px;
@@ -220,10 +225,12 @@ div.search-form
 
 .operations li a:visited
 {
-	color: #0066A4;
+	color:#000000;
 }
 
 .operations li a:hover
 {
-	background: #80CFFF;
+	background: #c6c6c6;
+	border-radius: 1px;
+
 }
