@@ -122,9 +122,13 @@ class Personal_externoController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('PersonalExterno');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+		$model=new PersonalExterno('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['PersonalExterno']))
+			$model->attributes=$_GET['PersonalExterno'];
+
+		$this->render('admin',array(
+			'model'=>$model,
 		));
 	}
 

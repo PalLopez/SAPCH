@@ -114,9 +114,13 @@ class Entradas_salidasController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('EntradasSalidas');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+		$model=new EntradasSalidas('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['EntradasSalidas']))
+			$model->attributes=$_GET['EntradasSalidas'];
+
+		$this->render('admin',array(
+			'model'=>$model,
 		));
 	}
 

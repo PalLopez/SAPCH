@@ -122,9 +122,13 @@ class AreasController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Areas');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+		$model=new Areas('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Areas']))
+			$model->attributes=$_GET['Areas'];
+
+		$this->render('admin',array(
+			'model'=>$model,
 		));
 	}
 
