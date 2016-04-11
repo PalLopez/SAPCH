@@ -8,6 +8,8 @@ $this->breadcrumbs=array(
 
 ?>
 
+<div style="text-align: center;">
 <h1>Registrar Salida (Usuario: <?php echo $model->id_usuario; ?>)</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

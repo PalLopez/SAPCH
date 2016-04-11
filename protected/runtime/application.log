@@ -5603,3 +5603,33 @@ Stack trace:
 REQUEST_URI=/yii/sapch/registrar_salidas/delete/1?ajax=entradas-salidas-grid
 HTTP_REFERER=http://localhost:8080/yii/sapch/registrar_salidas
 ---
+2016/04/11 06:42:04 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/Applications/XAMPP/xamppfiles/htdocs/yii/sapch/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/Applications/X...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/grid/CGridView.php(350): CAssetManager->publish('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(147): CGridView->init()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/sapch/protected/views/registrar_salidas/index.php(21): CBaseController->widget('zii.widgets.gri...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/sapch/protected/controllers/Registrar_salidasController.php(75): CController->render('index', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): Registrar_salidasController->actionIndex()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('')
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('registrar_salid...')
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/sapch/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii/sapch/registrar_salidas
+HTTP_REFERER=http://localhost/yii/sapch/registrar_entradas/create
+---
