@@ -16,6 +16,9 @@ $this->pageTitle=Yii::app()->name . ' - Login';
 				'validateOnSubmit'=>true,
 			),
 		)); ?>
+			<div style="width: 100%; height: auto; text-align: center;">
+				<img src="../images/casahogar_logo.png" style="width: 150px; height: 100px; margin-bottom: 20px;" />
+			</div>
 
 			<div class="row">
 				<?php echo $form->labelEx($model,'username'); ?>
