@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Nuevo Personal', 'url'=>array('create')),
-	array('label'=>'Lista de Personal', 'url'=>array('index')),
+	array('label'=>'Regresar', 'url'=>array('index')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -28,12 +28,7 @@ $('.search-form form').submit(function(){
 
 <h1>Administrar Personal Externo</h1>
 
-<?php echo CHtml::link('Busqueda Avanzada','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
+
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'personal-externo-grid',
@@ -44,7 +39,7 @@ $('.search-form form').submit(function(){
 		'nombre',
 		'empresa',
 		'genero',
-		'id_tipo_pe',
+		array('name'=>'id_tipo_pe','value'=>'$data->idTipoPe->nombre','type'=>'text',),
 		array(
 			'class'=>'CButtonColumn',
 		),

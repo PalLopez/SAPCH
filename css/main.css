@@ -140,9 +140,10 @@ div.form .rememberMe label
 
 div.view
 {
-	padding: 10px;
-	margin: 10px 0;
-	border: 1px solid #C9E0ED;
+	padding: 5px;
+	margin: 5px 250px;
+	border: 1px solid #a0b3bd;
+
 }
 
 div.breadcrumbs

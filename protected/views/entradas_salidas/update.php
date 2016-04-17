@@ -3,7 +3,9 @@
 /* @var $model EntradasSalidas */
 
 $this->breadcrumbs=array(
-	'Entradas/Salidas'=>array('index'),
+	'Personal interno'=>array('/usuarios'),
+	'Entradas / Salidas'=>array('index'),
+	'Administrar'=>array('admin'),
 	'Actualizar',
 );
 

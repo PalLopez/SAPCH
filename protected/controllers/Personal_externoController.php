@@ -127,7 +127,7 @@ class Personal_externoController extends Controller
 		if(isset($_GET['PersonalExterno']))
 			$model->attributes=$_GET['PersonalExterno'];
 
-		$this->render('admin',array(
+		$this->render('index',array(
 			'model'=>$model,
 		));
 	}

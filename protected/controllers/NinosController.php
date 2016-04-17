@@ -127,7 +127,7 @@ class NinosController extends Controller
 		if(isset($_GET['Ninos']))
 			$model->attributes=$_GET['Ninos'];
 
-		$this->render('admin',array(
+		$this->render('index',array(
 			'model'=>$model,
 		));
 	}

@@ -3,13 +3,13 @@
 /* @var $model Usuarios */
 
 $this->breadcrumbs=array(
-	'Usuarios'=>array('index'),
-	'Lista de usuarios',
+	'Personal interno',
 );
 
 $this->menu=array(
-	array('label'=>'Nuevo Usuario', 'url'=>array('create')),
-	array('label'=>'Administración de usuarios', 'url'=>array('admin')),
+	array('label'=>'Entradas / Salidas', 'url'=>array('/entradas_salidas')),
+	array('label'=>'Administrar usuarios', 'url'=>array('admin')),
+
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Lista de usuarios</h1>
+<h1>Personal interno</h1>
 
 
 
@@ -47,3 +47,18 @@ $('.search-form form').submit(function(){
 
 	),
 )); ?>
+
+<div class="content-bubbles">
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>

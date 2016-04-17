@@ -119,7 +119,7 @@ class Entradas_salidasController extends Controller
 		if(isset($_GET['EntradasSalidas']))
 			$model->attributes=$_GET['EntradasSalidas'];
 
-		$this->render('admin',array(
+		$this->render('index',array(
 			'model'=>$model,
 		));
 	}

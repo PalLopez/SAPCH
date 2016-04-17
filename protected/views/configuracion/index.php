@@ -11,3 +11,17 @@ $this->menu=array(
 	array('label'=>'Tipo de Personal Externo', 'url'=>array('/tipo_personal_externo')),
 );
 ?>
+<div class="content-bubbles">
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>

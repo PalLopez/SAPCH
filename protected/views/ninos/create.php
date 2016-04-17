@@ -5,6 +5,7 @@
 $this->breadcrumbs=array(
 	'Control de Niños'=>array('/control_ninos'),
 	'Niños'=>array('index'),
+	'Administrar'=>array('admin'),
 	'Nuevo',
 );
 

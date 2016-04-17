@@ -4,6 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Visitas'=>array('index'),
+	'Administrar'=>array('admin'),
 	'Nuevo',
 );
 

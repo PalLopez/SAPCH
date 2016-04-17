@@ -3,7 +3,9 @@
 /* @var $model EntradasSalidas */
 
 $this->breadcrumbs=array(
-	'Entradas/Salidas'=>array('index'),
+	'Personal interno'=>array('/usuarios'),
+	'Entradas / Salidas'=>array('index'),
+	'Administrar'=>array('admin'),
 	'Nuevo',
 );
 
@@ -12,6 +14,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Nuevo Entradas/Salidas</h1>
+<h1>Nueva Entrada</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

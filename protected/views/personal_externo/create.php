@@ -4,6 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Personal Externo'=>array('index'),
+	'Administrar'=>array('admin'),
 	'Nuevo',
 );
 
