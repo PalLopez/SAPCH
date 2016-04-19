@@ -16,6 +16,7 @@
 		'id_usuario',
 		array(
 			'class'=>'CButtonColumn',
+			'template'=>'{update}',
 		),
 	),
 )); ?>
