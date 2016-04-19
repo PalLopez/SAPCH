@@ -2,7 +2,7 @@
 /* @var $this ConfiguracionController */
 
 $this->breadcrumbs=array(
-	'Configuración',
+	'Otras Operaciones',
 );
 
 $this->menu=array(

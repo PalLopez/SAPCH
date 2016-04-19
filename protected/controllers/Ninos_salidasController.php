@@ -122,9 +122,13 @@ class Ninos_salidasController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('NinosSalidas');
+		$model=new NinosSalidas('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['NinosSalidas']))
+			$model->attributes=$_GET['NinosSalidas'];
+
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 

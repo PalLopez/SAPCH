@@ -3,12 +3,13 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Configuración'=>array('/configuracion'),
+	'Otras Operaciones'=>array('/configuracion'),
 	'Tipos de Personal Externo',
 );
 
 $this->menu=array(
-	array('label'=>'Administrar Tipo', 'url'=>array('admin')),
+	array('label'=>'Administrar Tipo de Personal Externo', 'url'=>array('admin')),
+	array('label'=>'Regresar', 'url'=>array('/configuracion')),
 );
 ?>
 

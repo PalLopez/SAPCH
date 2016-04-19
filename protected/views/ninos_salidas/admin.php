@@ -10,31 +10,12 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Nueva Salida', 'url'=>array('create')),
-	array('label'=>'Lista de Salidas', 'url'=>array('index')),
+	array('label'=>'Regresar', 'url'=>array('index')),
 );
 
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#ninos-salidas-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
 ?>
 
 <h1>Administrar Salidas de Niños</h1>
-
-<?php echo CHtml::link('Busqueda Avanzada','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'ninos-salidas-grid',

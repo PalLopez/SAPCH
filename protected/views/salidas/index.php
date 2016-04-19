@@ -1,6 +1,6 @@
 <?php
 /* @var $this SalidasController */
-/* @var $dataProvider CActiveDataProvider */
+/* @var $model Salidas */
 
 $this->breadcrumbs=array(
 	'Control de Niños'=>array('/control_ninos'),
@@ -8,13 +8,27 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Administrar Actividades', 'url'=>array('admin')),
+	array('label'=>'Administrar Actividades Externas', 'url'=>array('admin')),
+	array('label'=>'Regresar', 'url'=>array('/control_ninos')),
 );
+
 ?>
 
-<h1>Actividades Externas</h1>
+<h1>Administrar Actividades Externas</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'salidas-grid',
+	'dataProvider'=>$model->search(),
+	'filter'=>$model,
+	'columns'=>array(
+		'id',
+		'fecha_inicio',
+		'fecha_fin',
+		'hr_salida',
+		'hr_regreso',
+		'motivo',
+		/*
+		'lugar',
+		*/
+	),
 )); ?>

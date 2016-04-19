@@ -3,8 +3,9 @@
 /* @var $model Villas */
 
 $this->breadcrumbs=array(
-	'Configuración'=>array('/configuracion'),
+	'Otras Operaciones'=>array('/configuracion'),
 	'Villas'=>array('index'),
+	'Administrar'=>array('admin'),
 	'Visualizar',
 );
 

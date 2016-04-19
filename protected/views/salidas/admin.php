@@ -10,7 +10,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Nueva Actividad', 'url'=>array('create')),
-	array('label'=>'Lista de Actividades', 'url'=>array('index')),
+	array('label'=>'Regresar', 'url'=>array('index')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

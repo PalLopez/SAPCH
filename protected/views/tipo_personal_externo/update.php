@@ -3,8 +3,9 @@
 /* @var $model TipoPersonalExterno */
 
 $this->breadcrumbs=array(
-	'Configuración'=>array('/configuracion'),
+	'Otras Operaciones'=>array('/configuracion'),
 	'Tipos de Personal Externo'=>array('index'),
+	'Administrar'=>array('admin'),
 	'Actualizar',
 );
 

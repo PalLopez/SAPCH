@@ -30,7 +30,7 @@
 						array('label'=>'Personal Externo', 'url'=>array('/personal_externo'), 'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'Visitas', 'url'=>array('/visitas'), 'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'Control de Niños', 'url'=>array('/control_ninos'), 'visible'=>!Yii::app()->user->isGuest),
-						array('label'=>'Otras opciones', 'url'=>array('/configuracion'), 'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Otras Operaciones', 'url'=>array('/configuracion'), 'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'Registrar Entrada', 'url'=>array('/registrar_entradas/create'), 'visible'=>Yii::app()->user->isGuest),
 						array('label'=>'Registrar Salida', 'url'=>array('/registrar_salidas'), 'visible'=>Yii::app()->user->isGuest),
 						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),

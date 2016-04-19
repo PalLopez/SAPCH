@@ -127,7 +127,7 @@ class AreasController extends Controller
 		if(isset($_GET['Areas']))
 			$model->attributes=$_GET['Areas'];
 
-		$this->render('admin',array(
+		$this->render('index',array(
 			'model'=>$model,
 		));
 	}

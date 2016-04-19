@@ -122,9 +122,13 @@ class SalidasController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Salidas');
+		$model=new Salidas('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Salidas']))
+			$model->attributes=$_GET['Salidas'];
+
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 

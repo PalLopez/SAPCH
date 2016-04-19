@@ -5666,3 +5666,36 @@ Stack trace:
 REQUEST_URI=/yii/sapch/registrar_salidas/1
 HTTP_REFERER=http://localhost/yii/sapch/registrar_salidas
 ---
+2016/04/19 17:22:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(270): CController->missingAction('view')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('registrar_salid...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/sapch/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/sapch/registrar_salidas/1
+HTTP_REFERER=http://localhost/yii/sapch/registrar_salidas
+---
+2016/04/19 17:31:15 [error] [php] Undefined variable: model (/Applications/XAMPP/xamppfiles/htdocs/yii/sapch/protected/views/salidas/index.php:35)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): SalidasController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): SalidasController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/sapch/protected/controllers/SalidasController.php(128): SalidasController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): SalidasController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): SalidasController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): SalidasController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): SalidasController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): SalidasController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/sapch/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/sapch/salidas
+in /Applications/XAMPP/xamppfiles/htdocs/yii/sapch/protected/views/salidas/index.php (35)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/sapch/protected/controllers/SalidasController.php (128)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/sapch/index.php (13)

@@ -3,12 +3,13 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Configuración'=>array('/configuracion'),
+	'Otras Operaciones'=>array('/configuracion'),
 	'Villas',
 );
 
 $this->menu=array(
 	array('label'=>'Administrar Villas', 'url'=>array('admin')),
+	array('label'=>'Regresar', 'url'=>array('/configuracion')),
 );
 ?>
 
