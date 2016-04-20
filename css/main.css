@@ -27,6 +27,7 @@ body
 #sidebar
 {
 	padding: 20px;
+	height: 60vh;
 }
 
 #footer
@@ -36,12 +37,12 @@ body
 	font-size: 0.8em;
 	text-align: center;
 	border-top: 1px solid #C9E0ED;
-    left: 0px;
+    /*left: 0px;
     right: 0px;
     bottom: 0px;
     position: absolute;
-    z-index: 0;
-	background: #fff;
+    z-index: -1;*/
+	background: none;
 }
 
 #logo
