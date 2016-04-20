@@ -34,7 +34,7 @@
 						array('label'=>'Registrar Entrada', 'url'=>array('/registrar_entradas/create'), 'visible'=>Yii::app()->user->isGuest),
 						array('label'=>'Registrar Salida', 'url'=>array('/registrar_salidas'), 'visible'=>Yii::app()->user->isGuest),
 						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-						array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+						array('label'=>'Logout', 'url'=>array('/site/logout'), 'linkOptions'=>array('confirm'=>'¿Esta seguro que desea salir?'), 'visible'=>!Yii::app()->user->isGuest)
 					),
 				)); ?>
 			</div><!-- mainmenu -->

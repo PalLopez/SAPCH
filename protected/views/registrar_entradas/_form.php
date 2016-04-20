@@ -21,13 +21,14 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fecha'); ?>
-		<?php echo $form->dateField($model,'fecha'); ?>
+		<?php $nowdate = date('Y-m-d', strtotime($model->fecha)); echo CHtml::activeDateField($model, 'fecha', array('value' => $nowdate, 'min' => $nowdate, 'max' => $nowdate));?>
 		<?php echo $form->error($model,'fecha'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'hr_entrada'); ?>
-		<?php echo $form->timeField($model,'hr_entrada'); ?>
+		<?php $nowtime = date("h:i:s", strtotime($model->hr_entrada)); echo CHtml::activeTimeField($model, 'hr_entrada', array('value' => $nowtime, 'disabled' => 'true')); ?>
+		<?php $nowtime = date("h:i:s", strtotime($model->hr_entrada)); echo CHtml::activeTimeField($model, 'hr_entrada', array('value' => $nowtime, 'style' => 'display: none;')); ?>
 		<?php echo $form->error($model,'hr_entrada'); ?>
 	</div>
 

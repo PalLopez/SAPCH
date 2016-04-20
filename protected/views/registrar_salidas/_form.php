@@ -20,14 +20,9 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha'); ?>
-		<?php echo $form->dateField($model,'fecha'); ?>
-		<?php echo $form->error($model,'fecha'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'hr_salida'); ?>
-		<?php echo $form->timeField($model,'hr_salida'); ?>
+		<?php $nowtime = date("h:i:s", strtotime($model->hr_salida)); echo CHtml::activeTimeField($model, 'hr_salida', array('value' => $nowtime, 'disabled' => 'true')); ?>
+		<?php $nowtime = date("h:i:s", strtotime($model->hr_salida)); echo CHtml::activeTimeField($model, 'hr_salida', array('value' => $nowtime, 'style' => 'display: none;')); ?>
 		<?php echo $form->error($model,'hr_salida'); ?>
 	</div>
 
