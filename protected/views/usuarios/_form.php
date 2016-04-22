@@ -16,6 +16,7 @@
 )); ?>
 
 	<p class="note"><span class="required">*</span> Campos obligatorios.</p>
+	<p class="note"><span class="required">*</span> Para realizar una actualización en un usuario del sistema, es obligatorio ingresar una nueva contraseña.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -45,7 +46,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'contrasena'); ?>
-		<?php echo $form->passwordField($model,'contrasena',array('size'=>60,'maxlength'=>120)); ?>
+		<?php echo $form->passwordField($model,'contrasena',array('size'=>60,'maxlength'=>120, 'placeholder'=>'Escriba nueva contraseña')); ?>
 		<?php echo $form->error($model,'contrasena'); ?>
 	</div>
 

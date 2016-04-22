@@ -21,8 +21,7 @@ $this->menu=array(
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
-		'id_nino',
+		array('name'=>'id_nino','value'=>'$data->idNino->nombre','type'=>'text',),
 		'id_salida',
 	),
 )); ?>

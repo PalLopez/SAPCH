@@ -47,9 +47,7 @@ $('.search-form form').submit(function(){
 		'hr_salida',
 		'hr_regreso',
 		'motivo',
-		/*
 		'lugar',
-		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

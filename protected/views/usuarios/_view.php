@@ -33,5 +33,4 @@
 	<?php echo CHtml::encode($data->id_area); ?>
 	<br />
 
-
 </div>

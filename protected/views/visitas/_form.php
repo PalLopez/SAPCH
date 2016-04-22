@@ -44,12 +44,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'agendada'); ?>
-		<?php echo $form->textField($model,'agendada'); ?>
-		<?php echo $form->error($model,'agendada'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'id_pe'); ?>
 		<?php echo $form->dropDownList($model,'id_pe',CHtml::listData(PersonalExterno::model()->findAll(),'id','nombre'),array('empty'=>'Seleccione un personal externo')); ?>
 		<?php echo $form->error($model,'id_pe'); ?>

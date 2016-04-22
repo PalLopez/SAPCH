@@ -33,7 +33,7 @@ class Visitas extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('hr_entrada, motivo, fecha, agendada, id_pe', 'required'),
+			array('hr_entrada, motivo, fecha, id_pe', 'required'),
 			array('agendada', 'numerical', 'integerOnly'=>true),
 			array('id_pe', 'length', 'max'=>20),
 			array('hr_salida', 'safe'),
@@ -62,12 +62,12 @@ class Visitas extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'hr_entrada' => 'Hr Entrada',
-			'hr_salida' => 'Hr Salida',
+			'hr_entrada' => 'Hora de Entrada',
+			'hr_salida' => 'Hora de Salida',
 			'motivo' => 'Motivo',
 			'fecha' => 'Fecha',
 			'agendada' => 'Agendada',
-			'id_pe' => 'Id Pe',
+			'id_pe' => 'Personal Externo',
 		);
 	}
 

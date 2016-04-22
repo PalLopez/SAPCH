@@ -67,11 +67,11 @@ class Usuarios extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nombre' => 'Nombre',
-			'tipo_usuario' => 'Tipo Usuario',
-			'num_empleado' => 'Num Empleado',
+			'tipo_usuario' => 'Tipo de Usuario',
+			'num_empleado' => 'Num. Empleado',
 			'genero' => 'Genero',
-			'contrasena' => 'Contrasena',
-			'id_area' => 'Id Area',
+			'contrasena' => 'Contraseña',
+			'id_area' => 'Área',
 		);
 	}
 

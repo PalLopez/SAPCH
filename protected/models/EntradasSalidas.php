@@ -60,9 +60,9 @@ class EntradasSalidas extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'fecha' => 'Fecha',
-			'hr_entrada' => 'Hr Entrada',
-			'hr_salida' => 'Hr Salida',
-			'id_usuario' => 'Nombre de Usuario',
+			'hr_entrada' => 'Hora de Entrada',
+			'hr_salida' => 'Hora de Salida',
+			'id_usuario' => 'Usuario',
 		);
 	}
 

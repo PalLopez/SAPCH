@@ -21,11 +21,9 @@ $this->menu=array(
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
 		'nombre',
 		'genero',
 		'id_villa',
-
 	),
 )); ?>
 

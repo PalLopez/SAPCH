@@ -22,15 +22,11 @@ $this->menu=array(
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
 		'nombre',
 		'tipo_usuario',
 		'num_empleado',
 		'genero',
-		'contrasena',
-		/*
-		'id_area',
-		*/
+		array('name'=>'id_area','value'=>'$data->idArea->nombre','type'=>'text',),
 		array(
 			'class'=>'CButtonColumn',
 		),

@@ -21,8 +21,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'hr_salida'); ?>
-		<?php $nowtime = date("h:i:s", strtotime($model->hr_salida)); echo CHtml::activeTimeField($model, 'hr_salida', array('value' => $nowtime, 'disabled' => 'true')); ?>
-		<?php $nowtime = date("h:i:s", strtotime($model->hr_salida)); echo CHtml::activeTimeField($model, 'hr_salida', array('value' => $nowtime, 'style' => 'display: none;')); ?>
+		<?php $nowtime = date("H:i:s", strtotime($model->hr_salida)); echo CHtml::activeTimeField($model, 'hr_salida', array('value' => $nowtime, 'disabled' => 'true')); ?>
+		<?php $nowtime = date("H:i:s", strtotime($model->hr_salida)); echo CHtml::activeTimeField($model, 'hr_salida', array('value' => $nowtime, 'style' => 'display: none;')); ?>
 		<?php echo $form->error($model,'hr_salida'); ?>
 	</div>
 

@@ -87,6 +87,7 @@ class UsuariosController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+		$model->contrasena = "";
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);

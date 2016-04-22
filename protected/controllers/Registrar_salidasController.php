@@ -46,7 +46,7 @@ class Registrar_salidasController extends Controller
 		$model=$this->loadModel($id);
 		date_default_timezone_set('America/Cancun');
 		$model->fecha = date('Y-m-d');
-		$model->hr_salida = date('h:i:s', time());
+		$model->hr_salida = date('H:i:s', time());
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);

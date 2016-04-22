@@ -21,12 +21,10 @@ $this->menu=array(
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
 		'nombre',
 		'empresa',
 		'genero',
-		'id_tipo_pe'
-
+		array('name'=>'id_tipo_pe','value'=>'$data->idTipoPe->nombre','type'=>'text',),
 	),
 )); ?>
 

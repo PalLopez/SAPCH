@@ -27,8 +27,7 @@ $this->menu=array(
 		'fecha',
 		'hr_entrada',
 		'hr_salida',
-		'id_usuario',
-
+		array('name'=>'id_usuario','value'=>'$data->idUsuario->nombre','type'=>'text',),
 	),
 )); ?>
 

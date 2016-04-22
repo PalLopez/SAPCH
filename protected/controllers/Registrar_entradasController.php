@@ -46,7 +46,7 @@ class Registrar_entradasController extends Controller
 		$model=new EntradasSalidas;
 		date_default_timezone_set('America/Cancun');
 		$model->fecha = date('Y-m-d');
-		$model->hr_entrada = date('h:i:s', time());
+		$model->hr_entrada = date('H:i:s', time());
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);

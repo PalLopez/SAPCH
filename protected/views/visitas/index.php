@@ -7,27 +7,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Nueva visita', 'url'=>array('create')),
 	array('label'=>'Administrar Visitas', 'url'=>array('admin')),
-	/*Se comenta esta linea, array('label'=>'Lista de visitas', 'url'=>array('index')),*/
 );
-
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#visitas-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
 ?>
 
 <h1>Visitas</h1>
-
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'visitas-grid',
@@ -39,11 +23,7 @@ $('.search-form form').submit(function(){
 		'hr_salida',
 		'motivo',
 		'fecha',
-		'agendada',
-		/*
-		'id_pe',
-		*/
-
+		array('name'=>'id_pe','value'=>'$data->idPe->nombre','type'=>'text',),
 	),
 )); ?>
 

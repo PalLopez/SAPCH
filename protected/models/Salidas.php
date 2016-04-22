@@ -61,10 +61,10 @@ class Salidas extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'fecha_inicio' => 'Fecha Inicio',
+			'fecha_inicio' => 'Fecha de Inicio',
 			'fecha_fin' => 'Fecha Fin',
-			'hr_salida' => 'Hr Salida',
-			'hr_regreso' => 'Hr Regreso',
+			'hr_salida' => 'Hora de Salida',
+			'hr_regreso' => 'Hora de Regreso',
 			'motivo' => 'Motivo',
 			'lugar' => 'Lugar',
 		);

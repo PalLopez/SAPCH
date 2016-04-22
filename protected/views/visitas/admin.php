@@ -16,8 +16,6 @@ $this->menu=array(
 
 <h1>Administrar Visitas</h1>
 
-
-
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'visitas-grid',
 	'dataProvider'=>$model->search(),
@@ -28,10 +26,7 @@ $this->menu=array(
 		'hr_salida',
 		'motivo',
 		'fecha',
-		'agendada',
-		/*
-		'id_pe',
-		*/
+		array('name'=>'id_pe','value'=>'$data->idPe->nombre','type'=>'text',),
 		array(
 			'class'=>'CButtonColumn',
 		),

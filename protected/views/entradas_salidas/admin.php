@@ -9,7 +9,6 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Nueva Entrada', 'url'=>array('create')),
 	array('label'=>'Regresar', 'url'=>array('index')),
 );
 
@@ -27,7 +26,7 @@ $this->menu=array(
 		'fecha',
 		'hr_entrada',
 		'hr_salida',
-		'id_usuario',
+		array('name'=>'id_usuario','value'=>'$data->idUsuario->nombre','type'=>'text',),
 		array(
 			'class'=>'CButtonColumn',
 		),

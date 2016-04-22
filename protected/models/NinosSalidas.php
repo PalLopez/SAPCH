@@ -58,8 +58,8 @@ class NinosSalidas extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'id_nino' => 'Id Nino',
-			'id_salida' => 'Id Salida',
+			'id_nino' => 'Niño',
+			'id_salida' => 'Id de Activida Externa',
 		);
 	}
 

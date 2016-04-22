@@ -65,7 +65,7 @@ class PersonalExterno extends CActiveRecord
 			'nombre' => 'Nombre',
 			'empresa' => 'Empresa',
 			'genero' => 'Genero',
-			'id_tipo_pe' => 'Id Tipo Pe',
+			'id_tipo_pe' => 'Tipo de personal',
 		);
 	}
 

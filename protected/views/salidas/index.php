@@ -27,8 +27,6 @@ $this->menu=array(
 		'hr_salida',
 		'hr_regreso',
 		'motivo',
-		/*
-		'lugar',
-		*/
+		'lugar'
 	),
 )); ?>

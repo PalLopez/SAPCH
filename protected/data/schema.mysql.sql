@@ -2,8 +2,8 @@
 -- version 4.4.12
 -- http://www.phpmyadmin.net
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 21-02-2016 a las 20:42:06
+-- Servidor: localhost
+-- Tiempo de generación: 22-04-2016 a las 04:48:58
 -- Versión del servidor: 5.6.25
 -- Versión de PHP: 5.6.11
 
@@ -29,7 +29,14 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `areas` (
   `id` bigint(20) NOT NULL,
   `nombre` varchar(120) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `areas`
+--
+
+INSERT INTO `areas` (`id`, `nombre`) VALUES
+(1, 'Administracion');
 
 -- --------------------------------------------------------
 
@@ -43,14 +50,7 @@ CREATE TABLE IF NOT EXISTS `entradas_salidas` (
   `hr_entrada` time NOT NULL,
   `hr_salida` time DEFAULT NULL,
   `id_usuario` bigint(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `entradas_salidas`
---
-
-INSERT INTO `entradas_salidas` (`id`, `fecha`, `hr_entrada`, `hr_salida`, `id_usuario`) VALUES
-(1, '2016-02-21', '14:00:00', '20:59:00', 1);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -75,14 +75,7 @@ CREATE TABLE IF NOT EXISTS `ninos` (
   `nombre` varchar(120) NOT NULL,
   `genero` char(1) NOT NULL,
   `id_villa` bigint(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `ninos`
---
-
-INSERT INTO `ninos` (`id`, `nombre`, `genero`, `id_villa`) VALUES
-(1, 'Juan', 'M', 1);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -94,14 +87,7 @@ CREATE TABLE IF NOT EXISTS `ninos_salidas` (
   `id` bigint(20) NOT NULL,
   `id_nino` bigint(20) NOT NULL,
   `id_salida` bigint(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `ninos_salidas`
---
-
-INSERT INTO `ninos_salidas` (`id`, `id_nino`, `id_salida`) VALUES
-(1, 1, 1);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -115,14 +101,7 @@ CREATE TABLE IF NOT EXISTS `personal_externo` (
   `empresa` varchar(120) NOT NULL,
   `genero` char(1) NOT NULL,
   `id_tipo_pe` bigint(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `personal_externo`
---
-
-INSERT INTO `personal_externo` (`id`, `nombre`, `empresa`, `genero`, `id_tipo_pe`) VALUES
-(1, 'Joaquin Estrada Perez', 'ninguna', 'M', 1);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -138,14 +117,7 @@ CREATE TABLE IF NOT EXISTS `salidas` (
   `hr_regreso` time DEFAULT NULL,
   `motivo` text NOT NULL,
   `lugar` varchar(120) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `salidas`
---
-
-INSERT INTO `salidas` (`id`, `fecha_inicio`, `fecha_fin`, `hr_salida`, `hr_regreso`, `motivo`, `lugar`) VALUES
-(1, '2016-02-20', '2016-02-20', '02:44:00', '00:00:00', 'zbzbzcbxczb', 'bdzfbzdfb');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -156,14 +128,7 @@ INSERT INTO `salidas` (`id`, `fecha_inicio`, `fecha_fin`, `hr_salida`, `hr_regre
 CREATE TABLE IF NOT EXISTS `tipo_personal_externo` (
   `id` bigint(20) NOT NULL,
   `nombre` varchar(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `tipo_personal_externo`
---
-
-INSERT INTO `tipo_personal_externo` (`id`, `nombre`) VALUES
-(1, 'Familiar');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -186,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `tipo_usuario`, `num_empleado`, `genero`, `contrasena`, `id_area`) VALUES
-(1, 'Palmira Lopez', 'A', 1, 'F', 'palmira', NULL);
+(1, 'Palmira Lopez', 'A', 1, 'F', 'ebdf874f7a01ac54387ad74e949368c0d9bddeac', 1);
 
 -- --------------------------------------------------------
 
@@ -198,14 +163,7 @@ CREATE TABLE IF NOT EXISTS `villas` (
   `id` bigint(20) NOT NULL,
   `numero` int(2) NOT NULL,
   `nombre` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `villas`
---
-
-INSERT INTO `villas` (`id`, `numero`, `nombre`) VALUES
-(1, 1, 'Villa de los sueños');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -219,16 +177,9 @@ CREATE TABLE IF NOT EXISTS `visitas` (
   `hr_salida` time DEFAULT NULL,
   `motivo` text NOT NULL,
   `fecha` date NOT NULL,
-  `agendada` tinyint(1) NOT NULL,
+  `agendada` tinyint(1) DEFAULT NULL,
   `id_pe` bigint(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `visitas`
---
-
-INSERT INTO `visitas` (`id`, `hr_entrada`, `hr_salida`, `motivo`, `fecha`, `agendada`, `id_pe`) VALUES
-(1, '02:00:00', '02:00:00', 'hbhjbjhbjbhj', '2016-02-21', 1, 1);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Índices para tablas volcadas
@@ -316,12 +267,12 @@ ALTER TABLE `visitas`
 -- AUTO_INCREMENT de la tabla `areas`
 --
 ALTER TABLE `areas`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `entradas_salidas`
 --
 ALTER TABLE `entradas_salidas`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `logs`
 --
@@ -331,27 +282,27 @@ ALTER TABLE `logs`
 -- AUTO_INCREMENT de la tabla `ninos`
 --
 ALTER TABLE `ninos`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `ninos_salidas`
 --
 ALTER TABLE `ninos_salidas`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `personal_externo`
 --
 ALTER TABLE `personal_externo`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `salidas`
 --
 ALTER TABLE `salidas`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `tipo_personal_externo`
 --
 ALTER TABLE `tipo_personal_externo`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
@@ -361,12 +312,12 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `villas`
 --
 ALTER TABLE `villas`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `visitas`
 --
 ALTER TABLE `visitas`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- Restricciones para tablas volcadas
 --

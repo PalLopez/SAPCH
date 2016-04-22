@@ -25,7 +25,6 @@ $this->menu=array(
 		'tipo_usuario',
 		'num_empleado',
 		'genero',
-		'contrasena',
 		'id_area',
 	),
 )); ?>

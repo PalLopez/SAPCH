@@ -63,7 +63,7 @@ class Ninos extends CActiveRecord
 			'id' => 'ID',
 			'nombre' => 'Nombre',
 			'genero' => 'Genero',
-			'id_villa' => 'Id Villa',
+			'id_villa' => 'Villa',
 		);
 	}
 

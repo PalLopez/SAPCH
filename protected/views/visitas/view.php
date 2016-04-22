@@ -25,7 +25,6 @@ $this->menu=array(
 		'hr_salida',
 		'motivo',
 		'fecha',
-		'agendada',
 		'id_pe',
 	),
 )); ?>
